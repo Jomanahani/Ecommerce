@@ -1,9 +1,17 @@
-import './App.css';
+import { ThemeProvider } from "styled-components";
+import Header from "../src/Sections/Header";
+
+import { darkTheme, lightTheme } from "../src/global/Themes";
+
+import "./index.css";
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <ThemeProvider theme={lightTheme}>
+      <div className="App">
+        <Header />
+      </div>
+    </ThemeProvider>
   );
 }
 
