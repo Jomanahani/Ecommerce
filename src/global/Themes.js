@@ -7,7 +7,7 @@ export const lightTheme = {
     primaryText: "#1C1C1C",
     secondaryText: "#8b96a5",
     page: "#F7FAFC",
-    secondaryBackdround: "#E3E8EE",
+    secondaryBackdround: "#EFF2F4",
   },
 };
 
