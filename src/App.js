@@ -1,6 +1,7 @@
 import { ThemeProvider } from "styled-components";
 import Header from "../src/Sections/Header";
 import Footer from "../src/Sections/Footer";
+import Subscribe from "../src/Sections/Subscribe";
 
 import { darkTheme, lightTheme } from "../src/global/Themes";
 
@@ -11,6 +12,7 @@ function App() {
     <ThemeProvider theme={lightTheme}>
       <div className="App">
         <Header />
+        <Subscribe />
         <Footer />
       </div>
     </ThemeProvider>
