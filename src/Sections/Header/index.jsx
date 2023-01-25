@@ -11,7 +11,9 @@ const FlexNavItem = styled(NavItem)`
   flex-direction: row;
   align-items: center;
 `;
-const Germany = styled.img`
+export const Country = styled.img`
+  display: flex;
+  align-items: center;
   padding-left: 0.5rem;
 `;
 
@@ -35,7 +37,7 @@ export default function Header() {
         <NavUl>
           <NavItem>English, USD</NavItem>
           <FlexNavItem>
-            Ship to <Germany src={germany} alt="germany" />
+            Ship to <Country src={germany} alt="germany" />
             <MdKeyboardArrowDown />
           </FlexNavItem>
         </NavUl>
