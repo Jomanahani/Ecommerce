@@ -12,13 +12,13 @@ import item7 from "../../Assetse/item7.png";
 import item9 from "../../Assetse/item9.png";
 import item10 from "../../Assetse/item10.png";
 
-const SectionTitle = styled.h3`
+export const SectionTitle = styled.h3`
   font-size: 1.7rem;
   color: #1c1c1c;
   padding: 0.8rem 0;
-  padding-left: 2rem;
+  padding-left: 2.1rem;
 `;
-const RecommendedContaner = styled.div`
+export const RecommendedContaner = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
