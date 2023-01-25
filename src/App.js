@@ -1,19 +1,14 @@
 import { ThemeProvider } from "styled-components";
-import Header from "../src/Sections/Header";
-import Footer from "../src/Sections/Footer";
-import Subscribe from "../src/Sections/Subscribe";
-
 import { darkTheme, lightTheme } from "../src/global/Themes";
 
 import "./index.css";
+import Home from "./Pages/Home";
 
 function App() {
   return (
     <ThemeProvider theme={lightTheme}>
       <div className="App">
-        <Header />
-        <Subscribe />
-        <Footer />
+        <Home />
       </div>
     </ThemeProvider>
   );
