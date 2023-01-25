@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const FOOTER = styled.footer`
   width: 100%;
-  position: absolute;
+  position: relative;
   bottom: 0;
 `;
 export const CopyRight = styled.div`
-  padding: 0 5%;
+  padding: 0 6%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,7 +24,7 @@ export const LogoDiv = styled.div`
   width: 18rem;
 `;
 export const UpperFooter = styled.div`
-  padding: 0 5%;
+  padding: 0 6%;
   height: 13rem;
   display: flex;
   align-items: center;

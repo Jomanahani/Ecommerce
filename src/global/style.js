@@ -13,12 +13,8 @@ background-color: ${(props) => props.theme.palleat.page};
 
 export const Container = styled.div`
   width: 100%;
-  padding: 0 5%;
+  padding: 0 6%;
   display: flex;
-  /* margin: auto; */
-  background-color: transparent;
-
-  @media screen and (min-width: 500px) {
-    /* padding: 0 10%;   */
-  }
+  margin: auto;
+  background-color: #f7fafc;
 `;

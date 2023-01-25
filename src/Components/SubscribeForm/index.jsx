@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import { AiOutlineMail } from "react-icons/ai";
-
 const SubsForm = styled.form`
   display: flex;
   width: 25.5rem;

@@ -14,7 +14,7 @@ export const Navigation = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 5%;
+  padding: 0 6%;
   background-color: white;
   border-bottom: 1px solid ${(props) => props.theme.pallet.Lines};
 `;
