@@ -1,0 +1,44 @@
+import React from 'react'
+import styled from 'styled-components'
+
+const Div = styled.div`
+    &.container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 14rem;
+        height: 2.6;
+        margin:0 0.3rem;
+    }
+    &.container img{
+        width: 2rem;
+        height: 1.5rem;
+    }
+    &.Text{ 
+        display: flex;
+        flex-direction: column;
+        width: 12rem;
+        padding: 0 0.7rem;
+    }
+    &.Text h4{ 
+        font-size: 1rem;
+        font-weight: 400;
+        color: ${(props) => props.theme.pallet.primaryText};
+    }
+    &.Text p{ 
+        font-size: 0.8rem;
+        color: ${(props) => props.theme.pallet.secondaryText};
+        letter-spacing: 0.6px;
+    }
+`
+export default function Region(props) {
+  return (
+    <Div className='container'>
+        <img src={props.src} alt='country'/>
+        <Div className='Text'>
+            <h4>{props.country}</h4>
+            <p>{props.site}</p>
+        </Div>
+    </Div>
+  )
+}
