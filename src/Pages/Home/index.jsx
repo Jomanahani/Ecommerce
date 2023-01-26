@@ -1,5 +1,6 @@
 import React from "react";
 import { Container } from "../../global/style";
+import Categories from "../../Sections/Categories";
 
 import Footer from "../../Sections/Footer";
 import Header from "../../Sections/Header";
@@ -13,6 +14,7 @@ export default function Home() {
     <>
       <Header />
       <Container>
+        <Categories />
         <Recommended />
         <Serviceses />
         <RegionSec />
