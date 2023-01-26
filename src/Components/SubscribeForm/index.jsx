@@ -16,7 +16,7 @@ const SubsInput = styled.input`
   border: 1px solid ${(props) => props.theme.pallet.Lines};
   outline: none;
 `;
-const SubsButton = styled.button`
+export const SubsButton = styled.button`
   background-color: ${(props) => props.theme.pallet.primary};
   color: white;
   font-size: 1rem;
