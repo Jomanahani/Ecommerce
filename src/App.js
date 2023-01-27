@@ -3,6 +3,7 @@ import { darkTheme, lightTheme } from "../src/global/Themes";
 
 import "./index.css";
 import Home from "./Pages/Home";
+import Register from "./Pages/Register";
 import SignIn from "./Pages/SignIn";
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
     <ThemeProvider theme={lightTheme}>
       <div className="App">
         {/* <Home /> */}
-        <SignIn />
+        {/* <SignIn /> */}
+        <Register />
       </div>
     </ThemeProvider>
   );

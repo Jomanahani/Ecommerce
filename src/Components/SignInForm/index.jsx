@@ -35,10 +35,15 @@ export const Forminput = styled.input`
   color: ${(props) => props.theme.pallet.secondaryText};
   font-size: 0.8rem;
   padding: 0.7rem;
-  margin: 0.4rem auto;
+  margin: 0.2rem auto;
   border-radius: 0.3rem;
-`;
-const Or = styled.div`
+  &.small{
+    width: 8.8rem;
+    margin-right: 0.6rem;
+  }
+  `;
+  
+export const Or = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,7 +59,7 @@ const Or = styled.div`
     padding: 0 0.6rem;
   }
 `;
-const FlexDiv = styled.div`
+export const FlexDiv = styled.div`
   display: flex;
   & > input {
     margin: 0.5rem;
