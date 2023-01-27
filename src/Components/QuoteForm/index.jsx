@@ -12,12 +12,12 @@ const QuForm = styled.form`
   margin: 2rem;
   height: 20rem;
   width: 30.6rem;
-  border-radius: 1px solid ${(props) => props.theme.pallet.Lines};
+  border: 1px solid ${(props) => props.theme.pallet.Lines};
   background-color: ${(props) => props.theme.pallet.mainBackdround};
   border-radius: 0.5rem;
   box-shadow: 2px 2px 6px #babec1;
 `;
-const QuoteTitle = styled.form`
+const QuoteTitle = styled.h3`
   font-size: 1.2rem;
   font-weight: 600;
   padding: 1rem 0;
