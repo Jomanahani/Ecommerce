@@ -17,6 +17,7 @@ export const Country = styled.img`
   padding-left: 0.5rem;
 `;
 
+
 export default function Header() {
   return (
     <>
