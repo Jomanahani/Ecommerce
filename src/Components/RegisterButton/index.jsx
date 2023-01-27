@@ -5,6 +5,7 @@ export const RegButton = styled.button`
   width: 18.5rem;
   padding: 0.6rem;
   margin: 0 auto;
+  margin-top: 0.5rem;
   border: none;
   outline: none;
   text-align: center;

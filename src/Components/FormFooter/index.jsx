@@ -11,7 +11,7 @@ import payment4 from "../../Assetse/payment4.png";
 
 const Footer = styled.footer`
   width: 100%;
-  height: 4rem;
+  height: 8%;
   padding: 0 6%;
   position: fixed;
   bottom: 0;
