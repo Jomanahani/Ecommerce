@@ -14,7 +14,7 @@ const LogoIcon = styled.img`
 `;
 const LogoTitle = styled.h1`
   font-size: 1.7rem;
-  color: ${(props) => props.theme.pallet.secondary};
+  color: #8CB7F5;
   padding: 0 0.5rem;
 `;
 

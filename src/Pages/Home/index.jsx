@@ -10,12 +10,14 @@ import Recommended from "../../Sections/Recommended";
 import RegionSec from "../../Sections/Region";
 import Serviceses from "../../Sections/Serviceses";
 import Subscribe from "../../Sections/Subscribe";
+import Trending from "../../Sections/Trending";
 
 export default function Home() {
   return (
     <>
       <Header />
       <Container>
+        <Trending />
         <Offers />
         <Categories />
         <QuoteRequest />
