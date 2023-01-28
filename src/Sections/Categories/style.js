@@ -25,6 +25,7 @@ export const Title = styled.h3`
   color: ${(props) => props.theme.pallet.primaryText};
 `;
 export const Source = styled.button`
+  height: 2.3rem;
   padding: 0.5rem;
   margin: 1.3rem 2rem;
   background-color: ${(props) => props.theme.pallet.mainBackdround};

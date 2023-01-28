@@ -14,6 +14,6 @@ background-color: ${(props) => props.theme.palleat.page};
 export const Container = styled.div`
   width: 100%;
   padding: 0 6%;
-  margin: auto;
+  margin: 0 auto;
   background-color: #f7fafc;
 `;
