@@ -4,6 +4,7 @@ import Categories from "../../Sections/Categories";
 
 import Footer from "../../Sections/Footer";
 import Header from "../../Sections/Header";
+import Offers from "../../Sections/Offers";
 import QuoteRequest from "../../Sections/QuoteRequest";
 import Recommended from "../../Sections/Recommended";
 import RegionSec from "../../Sections/Region";
@@ -15,6 +16,7 @@ export default function Home() {
     <>
       <Header />
       <Container>
+        <Offers />
         <Categories />
         <QuoteRequest />
         <Recommended />

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
-// import PhoneInput from 'react-phone-input'
 import styled from "styled-components";
 import RegisterButton from "../RegisterButton";
+import { Link } from "react-router-dom";
+
 import {
   Forminput,
   FormLabel,
@@ -65,7 +66,7 @@ export default function RegisterForm() {
         <FormLabel> I agree with Terms and Conditions </FormLabel>
       </FlexDiv>
       <Hr />
-      <Logn>Already have an accaunt?<a href="#"> Logn in </a></Logn>
+      <Logn>Already have an accaunt?<Link to="/SignIn"> Logn in </Link></Logn>
     </RegForm>
   );
 }

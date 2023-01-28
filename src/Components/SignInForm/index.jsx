@@ -3,6 +3,7 @@ import styled from "styled-components";
 import RegisterButton, { RegButton } from "../RegisterButton";
 import { AiFillFacebook } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
+import { Link } from "react-router-dom";
 
 export const SignForm = styled.form`
   position: relative;
@@ -103,7 +104,7 @@ export default function SignInForm() {
         <AiFillFacebook style={style} /> Continue with Facebook
       </RegButton>
       <p>
-        Don’t have an account? <a href="#">Register now</a>
+        Don’t have an account? <Link to="/">Register now</Link>
       </p>
     </SignForm>
   );
