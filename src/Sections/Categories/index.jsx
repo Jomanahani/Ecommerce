@@ -69,15 +69,11 @@ export default function Categories() {
           />
           <Category type="Gaming set" from="From USD 35" src={Category13} />
           <Category type="Laptops & PC" from="From USD 340" src={Category14} />
-          <Category
-            type="Smartphones"
-            from="From USD 19"
-            downRad="true"
-            src={Category15}
-          />
+          <Category type="Smartphones" from="From USD 19" src={Category15} />
           <Category
             type="Electric kattle"
             from="From USD 240"
+            downRad="true"
             src={Category16}
           />
         </InerContaner>

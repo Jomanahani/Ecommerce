@@ -21,7 +21,7 @@ const Price = styled.p`
   padding-left: 0.7rem;
 `;
 
-const Descrption = styled.p`
+export const Descrption = styled.p`
   font-size: 1rem;
   color: ${(props) => props.theme.pallet.secondaryText};
   padding: 0.7rem;
