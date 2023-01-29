@@ -6,7 +6,7 @@ import trending from "../../Assetse/trending.png";
 import user from "../../Assetse/user.png";
 
 import ColoredDiv from "../../Components/ColoredDiv";
-import { FlexDiv } from "../../Components/SignInForm";
+import { FlexDiv } from "../../Components/SignInForm/style";
 import { Source } from "../Categories/style";
 import { SectionTitle } from "../Recommended";
 
