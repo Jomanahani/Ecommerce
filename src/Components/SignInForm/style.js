@@ -64,4 +64,9 @@ export const FlexDiv = styled.div`
     justify-content: space-between;
     align-items: center;
   }
+  &.align{
+    align-items: center;
+    padding-top: 0.5rem;
+    margin: 0;
+  }
 `;
