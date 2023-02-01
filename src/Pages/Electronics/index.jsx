@@ -20,15 +20,19 @@ import select5 from "../../Assetse/select5.png";
 import elect2 from "../../Assetse/elect2.png";
 import elect5 from "../../Assetse/elect5.png";
 import { RecommendedContaner } from "../../Sections/Recommended";
+import ItemPath from "../../Components/ItemPath";
+import ItemFilter from "../../Components/ItemFilter";
 
 export default function Electronics() {
   return (
     <>
       <Header />
       <Container>
+        <ItemPath />
         <PageLayout>
           <SideBar />
           <PageContent>
+          <ItemFilter electronic />
             <RecommendedContaner>
               <ElectronicsItem
                 src={select1}

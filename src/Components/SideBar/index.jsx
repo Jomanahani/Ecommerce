@@ -46,6 +46,7 @@ export default function SideBar() {
             <Option>Electronics</Option>
             <Option>Smartphones </Option>
             <Option>Modern tech</Option>
+            <Option className="All">See all </Option>
           </Options>
         )}
       </SidebarItem>
@@ -77,6 +78,7 @@ export default function SideBar() {
               <input type="checkbox" value="Lenovo" />
               <Option className="checked">Lenovo</Option>
             </FlexDiv>
+            <Option className="All">See all </Option>
           </Options>
         )}
       </SidebarItem>
@@ -108,6 +110,7 @@ export default function SideBar() {
               <input type="checkbox" value="Memory" />
               <Option className="checked">Large Memory</Option>
             </FlexDiv>
+            <Option className="All">See all </Option>
           </Options>
         )}
       </SidebarItem>

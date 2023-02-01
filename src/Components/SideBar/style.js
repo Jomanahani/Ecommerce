@@ -29,6 +29,9 @@ export const Option = styled.p`
     color: ${(props) => props.theme.pallet.primaryText};
     padding-top: 0;
   }
+  &.All{
+    color: ${(props) => props.theme.pallet.primary};
+  }
 `;
 export const SidebarInput = styled.input`
   width: 50%;
