@@ -14,15 +14,19 @@ import select3 from "../../Assetse/select3.png";
 import select4 from "../../Assetse/select4.png";
 import select5 from "../../Assetse/select5.png";
 import select6 from "../../Assetse/select6.png";
+import ItemPath from "../../Components/ItemPath";
+import ItemFilter from "../../Components/ItemFilter";
 
 export default function SelectedItems() {
   return (
     <>
       <Header />
       <Container>
+      <ItemPath/>
         <PageLayout>
        <SideBar />
        <PageContent>
+        <ItemFilter selected />
         <ItemCard
           src={select1}
           name="Canon Cmera EOS 2000, Black 10x zoom"

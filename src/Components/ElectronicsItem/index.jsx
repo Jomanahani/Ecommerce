@@ -4,7 +4,6 @@ import styled from "styled-components";
 import favorite from "../../Assetse/favorite.png";
 import { ItemP, Rate } from "../ItemCard";
 import { Flex } from "../../Sections/Footer/style";
-import { FlexDiv } from "../SignInForm/style";
 
 const ItemDiv = styled.div`
   &.main {
@@ -16,7 +15,6 @@ const ItemDiv = styled.div`
     width: 16.5rem;
     background-color: ${(props) => props.theme.pallet.mainBackdround};
     border-radius: 0.5rem;
-    /* margin: 1rem; */
   }
   &.info {
     width: 100%;
