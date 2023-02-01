@@ -17,7 +17,7 @@ import select6 from "../../Assetse/select6.png";
 
 export default function SelectedItems() {
   return (
-    <div>
+    <>
       <Header />
       <Container>
         <PageLayout>
@@ -81,6 +81,6 @@ export default function SelectedItems() {
       </Container>
       <Subscribe />
       <Footer />
-    </div>
+    </>
   );
 }
