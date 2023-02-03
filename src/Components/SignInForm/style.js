@@ -74,4 +74,8 @@ export const FlexDiv = styled.div`
     align-items: center;
     color: #787A80;
   }
+  &.start{
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 `;

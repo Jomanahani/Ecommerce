@@ -4,15 +4,15 @@ import { Title } from "../InfoType";
 export const ShowDiv = styled.div`
   display: flex;
   width: 100%;
-  height: 35rem;
+  height: 34rem;
   background-color: ${(props) => props.theme.pallet.mainBackdround};
   border: 1px solid ${(props) => props.theme.pallet.Lines};
   border-radius: 0.5rem;
   padding: 0.4rem;
   margin: 1rem auto;
   & img {
-    margin-right: 0.2rem;
-    margin-top: 0.3rem;
+    margin-right: 0.5rem;
+    margin-top: 0.4rem;
   }
 `;
 export const InnerDiv = styled.div`
@@ -69,6 +69,7 @@ export const ItemTitle = styled(Title)`
   font-weight: 600;
 `;
 export const ItemImage = styled.img`
+  width: 100%;
   padding: 0 0.3rem;
   border: 1px solid ${(props) => props.theme.pallet.Lines};
   border-radius: 0.5rem;

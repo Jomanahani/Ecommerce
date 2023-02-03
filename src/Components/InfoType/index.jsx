@@ -7,6 +7,9 @@ export const Title =styled.h5`
     color: #1C1C1C;
     padding: 0 1.5rem;
     padding-bottom: 0.5rem;
+    &.like{
+      padding: 0;
+    }
 `
 const InfoUl =styled.ul`
 list-style: none;

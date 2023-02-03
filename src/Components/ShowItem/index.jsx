@@ -121,8 +121,8 @@ function ShowItem() {
         <InnerDiv className="Region">
           <FlexDiv>
             <img src={Region} alt="avatar" />
-            <p>Supplier</p>
-            <p>Guanjoi Trading LLC</p>
+            <p>Supplier 
+           Guanjoi Trading LLC</p>
           </FlexDiv>
           <HR />
           <InnerDiv className="RegInfo">
