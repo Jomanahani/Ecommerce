@@ -25,12 +25,15 @@ export const SubsButton = styled.button`
   border-radius: 0.6rem;
   border: none;
   outline: none;
+  &.orang{
+    background-color: #FF9017;
+  }
 `;
 export default function SubscribeForm() {
   return (
     <SubsForm>
       <SubsInput type="text" id="Subscribe" placeholder="&#x2709; Email" />
-      <SubsButton type="submit">Subscribe</SubsButton>
+      <SubsButton type="submit">Shop now</SubsButton>
     </SubsForm>
   );
 }

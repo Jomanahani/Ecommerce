@@ -7,7 +7,7 @@ import QuoteForm from "../../Components/QuoteForm";
 const QuoteContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 93%;
+  width: 95%;
   margin: 2rem auto;
   background-image: url(${quote});
   background-size: cover;
@@ -29,7 +29,7 @@ const InnerContainer = styled.div`
 
 export default function QuoteRequest() {
   return (
-    <section>
+    <>
       <QuoteContainer>
         <InnerContainer>
           <h3>An easy way to send requests to all suppliers</h3>
@@ -40,6 +40,6 @@ export default function QuoteRequest() {
         </InnerContainer>
         <QuoteForm />
       </QuoteContainer>
-    </section>
+    </>
   );
 }
