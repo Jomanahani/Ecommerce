@@ -5,6 +5,7 @@ import { darkTheme, lightTheme } from "../src/global/Themes";
 import "./index.css";
 import Electronics from "./Pages/Electronics";
 import Home from "./Pages/Home";
+import Item from "./Pages/Item";
 import Register from "./Pages/Register";
 import SelectedItems from "./Pages/SelectedItems";
 import SignIn from "./Pages/SignIn";
@@ -19,6 +20,7 @@ function App() {
         <Route path="/home" element={<Home /> } />
         <Route path="/SelectedItems" element={<SelectedItems /> } />
         <Route path="/Electronics" element={<Electronics /> } />
+        <Route path="/Item" element={<Item /> } />
         </Routes>
         {/* <Home /> */}
         {/* <SignIn /> */}
