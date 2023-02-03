@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 import { Option } from "../SideBar/style";
 import { FlexDiv } from "../SignInForm/style";
@@ -7,7 +8,6 @@ import { FlexDiv } from "../SignInForm/style";
 import { FaBars } from "react-icons/fa";
 import { AiFillAppstore } from "react-icons/ai";
 import { RiArrowDownSLine } from "react-icons/ri";
-import { useNavigate } from "react-router-dom";
 
 const Filter = styled.div`
   width: 85%;
@@ -21,9 +21,6 @@ const Filter = styled.div`
   background-color: ${(props) => props.theme.pallet.mainBackdround};
   color: ${(props) => props.theme.pallet.primaryText};
   border-radius: 0.5rem;
-  /* &.elec{
-    width: 80%;
-  } */
 `;
 const Featured = styled.div`
   width: 8rem;
@@ -41,19 +38,17 @@ const Featured = styled.div`
   }
 `;
 const IconDIV = styled.div`
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   border-right: 1px solid ${(props) => props.theme.pallet.Lines};
-  padding-right: 0.2rem;
   border-radius: 0.5rem 0 0 0.5rem;
   &.right {
     border: none;
     font-size: 1rem;
-    padding-left: 0.2rem;
     border-radius: 0 0.5rem 0.5rem 0;
   }
   &.selected {

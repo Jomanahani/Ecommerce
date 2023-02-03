@@ -50,10 +50,16 @@ export const ItemP = styled.p`
     color: #505050;
     padding: 0;
   }
-  &.elecPrice{
+  &.elecPrice {
     font-size: 1.1rem;
     font-weight: 600;
     color: #1c1c1c;
+    padding: 0;
+  }
+  &.offer {
+    color: #fa3434;
+    font-size: 1.1rem;
+    font-weight: 600;
     padding: 0;
   }
 `;

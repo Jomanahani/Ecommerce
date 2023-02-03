@@ -22,6 +22,7 @@ import elect5 from "../../Assetse/elect5.png";
 import { RecommendedContaner } from "../../Sections/Recommended";
 import ItemPath from "../../Components/ItemPath";
 import ItemFilter from "../../Components/ItemFilter";
+import ShowItem from "../../Components/ShowItem";
 
 export default function Electronics() {
   return (

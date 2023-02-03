@@ -69,4 +69,9 @@ export const FlexDiv = styled.div`
     padding-top: 0.5rem;
     margin: 0;
   }
+  &.detail{
+    justify-content: space-between;
+    align-items: center;
+    color: #787A80;
+  }
 `;
