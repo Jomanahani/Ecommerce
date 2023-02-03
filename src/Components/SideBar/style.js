@@ -32,6 +32,11 @@ export const Option = styled.p`
   &.All{
     color: ${(props) => props.theme.pallet.primary};
   }
+  &.Save{
+    color: ${(props) => props.theme.pallet.primary};
+    text-align: center;
+    font-weight: 500;
+  }
 `;
 export const SidebarInput = styled.input`
   width: 50%;

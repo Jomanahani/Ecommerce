@@ -66,12 +66,12 @@ const User = styled.div`
     padding: 0 0.5rem;
   }
 `;
-const Join = styled.button`
+export const Join = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 11rem;
-  height: 2rem;
+  width: 99%;
+  height: 2.2rem;
   padding: 1rem;
   margin: 0.5rem auto;
   text-align: center;
@@ -80,6 +80,7 @@ const Join = styled.button`
   font-size: 1rem;
   background-color: ${(props) => (props.join ? "#0D6EFD" : "white")};
   color: ${(props) => (props.join ? "white" : "0D6EFD")};
+  border:  ${(props) => (props.Region ? '1px solid #E3E8EE' : "none")};
   border-radius: 0.5rem;
 `;
 
