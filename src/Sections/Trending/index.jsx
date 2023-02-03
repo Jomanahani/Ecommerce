@@ -12,7 +12,7 @@ import { SectionTitle } from "../Recommended";
 
 const TrendingSec = styled.div`
   display: flex;
-  width: 93%;
+  width: 95%;
   height: 25rem;
   background-color: ${(props) => props.theme.pallet.mainBackdround};
   border: 1px solid ${(props) => props.theme.pallet.Lines};
@@ -86,7 +86,7 @@ export const Join = styled.button`
 
 export default function Trending() {
   return (
-    <section>
+    <>
       <TrendingSec>
         <TrendingUl>
           <TrendingLi>Automobiles</TrendingLi>
@@ -127,6 +127,6 @@ export default function Trending() {
           />
         </div>
       </TrendingSec>
-    </section>
+    </>
   );
 }

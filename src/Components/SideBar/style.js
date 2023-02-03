@@ -29,17 +29,17 @@ export const Option = styled.p`
     color: ${(props) => props.theme.pallet.primaryText};
     padding-top: 0;
   }
-  &.All{
+  &.All {
     color: ${(props) => props.theme.pallet.primary};
   }
-  &.Save{
+  &.Save {
     color: ${(props) => props.theme.pallet.primary};
     text-align: center;
     font-weight: 500;
   }
 `;
 export const SidebarInput = styled.input`
-  width: 50%;
+  width: 85%;
   height: 2.5rem;
   border: none;
   outline: none;
@@ -59,7 +59,7 @@ export const SidebarInput = styled.input`
   }
 `;
 export const ApplyButton = styled.button`
-  width: 80%;
+  width: 92%;
   height: 2.5rem;
   border: none;
   outline: none;
@@ -68,8 +68,7 @@ export const ApplyButton = styled.button`
   font-size: 1rem;
   font-weight: 500;
   border: 1px solid ${(props) => props.theme.pallet.Lines};
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   border-radius: 0.5rem;
   cursor: pointer;
-
 `;
