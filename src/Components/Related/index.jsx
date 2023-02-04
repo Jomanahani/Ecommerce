@@ -20,7 +20,7 @@ export const RelatedDiv = styled.div`
   margin-top: 1rem;
   & img {
     height: 11.2rem;
-    width: 12rem;
+    width: 97%;
     margin: 0.5rem 0;
   }
   & p {
