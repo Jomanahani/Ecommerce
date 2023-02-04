@@ -19,5 +19,5 @@ export const SignIn=(userInfo)=>{
           "password should contain at least one special characters"
         )
         .required("password is a required field"),    })
- return schema.validate(userInfo)
+ return schema.validate(userInfo, { abortEarly: false })
 }
