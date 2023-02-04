@@ -3,12 +3,13 @@ export const lightTheme = {
   pallet: {
     primary: "#0D6EFD",
     secondary: "#E3F0FF",
-    Lines: "#E0E0E0",
     primaryText: "#1C1C1C",
     secondaryText: "#8b96a5",
     page: "#F7FAFC",
     mainBackdround: "#FFFFFF",
     secondaryBackdround: "#EFF2F4",
+    Lines: "#E0E0E0",
+    Footer: "#FFFFFF",
   },
 };
 
@@ -16,7 +17,13 @@ export const darkTheme = {
   theme: "dark",
   pallet: {
     primary: "#0D6EFD",
-    secondary: "red",
-    page: "black",
+    secondary: "#E3F0FF",
+    primaryText: "#f7fafc",
+    secondaryText: "#8b96a5",
+    page: "#23272f",
+    mainBackdround: "#343a46",
+    secondaryBackdround: "#1d2026",
+    Lines: "#3f4551",
+    Footer: "#3d4552",
   },
 };

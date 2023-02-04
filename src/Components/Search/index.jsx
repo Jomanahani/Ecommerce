@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { SearchForm, SearcgInput, Dropdown, SearchButton } from "./style";
 
 export default function Search() {

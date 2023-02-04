@@ -7,7 +7,7 @@ export const Path = styled.div`
   width: 35%;
   font-size: 1rem;
   color: #8b96a5;
-  padding: 1rem;
+  padding: 1.5rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;

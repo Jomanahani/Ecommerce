@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export const Title =styled.h5`
     font-size: 1rem;
     font-weight: 500;
-    color: #1C1C1C;
+    color:${(props) => props.theme.pallet.primaryText};
     padding: 0 1.5rem;
     padding-bottom: 0.5rem;
     &.like{

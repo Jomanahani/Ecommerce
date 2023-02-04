@@ -3,29 +3,32 @@ import styled from "styled-components";
 
 import favorite from "../../Assetse/favorite.png";
 import stars from "../../Assetse/stars.png";
+import { Dot } from "../ShowItem/style";
 
 const ItemDiv = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 1rem;
   margin: 1rem auto;
-  width: 85%; //57.5
+  width: 85%;
   height: 14.5rem;
   background-color: ${(props) => props.theme.pallet.mainBackdround};
   border: 1px solid ${(props) => props.theme.pallet.Lines};
   border-radius: 0.5rem;
+    &>div{
+      padding:0 1rem;
+    }
 `;
 export const ItemP = styled.p`
   font-size: 1rem;
   padding: 0.3rem 0;
+  color:${(props) => props.theme.pallet.primaryText};
   &.name {
-    color: #1c1c1c;
     font-weight: 500;
   }
   &.price {
     font-size: 1.3rem;
     font-weight: 600;
-    color: #1c1c1c;
   }
   &.view {
     color: #0d6efd;
@@ -53,7 +56,6 @@ export const ItemP = styled.p`
   &.elecPrice {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #1c1c1c;
     padding: 0;
   }
   &.offer {
@@ -82,7 +84,7 @@ const FlexP = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 50%;
+  width: 55%;
 `;
 
 export default function ItemCard(props) {
@@ -95,7 +97,9 @@ export default function ItemCard(props) {
         <FlexP>
           <Rate src={stars} alt="rate" />
           <ItemP className="rate">7.5</ItemP>
+          <Dot />
           <ItemP className="orders">{props.order}</ItemP>
+          <Dot />
           <ItemP className="free">Free Shipping</ItemP>
         </FlexP>
         <ItemP className="desc">{props.desc}</ItemP>

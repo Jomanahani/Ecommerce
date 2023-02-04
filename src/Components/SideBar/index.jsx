@@ -12,6 +12,7 @@ import {
   Option,
   SidebarInput,
   ApplyButton,
+  SelectType,
 } from "./style";
 
 import stars5 from "../../Assetse/stars5.png";
@@ -30,14 +31,13 @@ export default function SideBar() {
 
   const rangeSelector = (event, newValue) => {
     setValue(newValue);
-    console.log(newValue);
   };
 
   return (
     <Sidebar>
       <SidebarItem>
         <FlexDiv className="justify" onClick={() => setOptions(!options)}>
-          <selectType>Category</selectType>
+          <SelectType>Category</SelectType>
           {options ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
         </FlexDiv>
         {options && (
@@ -53,7 +53,7 @@ export default function SideBar() {
 
       <SidebarItem>
         <FlexDiv className="justify" onClick={() => setBrands(!Brands)}>
-          <selectType>Brands</selectType>
+          <SelectType>Brands</SelectType>
           {Brands ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
         </FlexDiv>
         {Brands && (
@@ -85,7 +85,7 @@ export default function SideBar() {
 
       <SidebarItem>
         <FlexDiv className="justify" onClick={() => setFeatures(!Features)}>
-          <selectType>Features</selectType>
+          <SelectType>Features</SelectType>
           {Features ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
         </FlexDiv>
         {Features && (
@@ -117,7 +117,7 @@ export default function SideBar() {
 
       <SidebarItem>
         <FlexDiv className="justify" onClick={() => setPrice(!price)}>
-          <selectType>Price range</selectType>
+          <SelectType>Price range</SelectType>
           {price ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
         </FlexDiv>
         {price && (
@@ -144,7 +144,7 @@ export default function SideBar() {
 
       <SidebarItem>
         <FlexDiv className="justify" onClick={() => setCondition(!condition)}>
-          <selectType>Condition</selectType>
+          <SelectType>Condition</SelectType>
           {condition ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
         </FlexDiv>
         {condition && (
@@ -156,7 +156,7 @@ export default function SideBar() {
                 value="Any"
                 name="Any"
               />{" "}
-              Any
+               <Option>Any</Option>
             </FlexDiv>
             <FlexDiv className="align">
               <SidebarInput
@@ -191,7 +191,7 @@ export default function SideBar() {
 
       <SidebarItem>
         <FlexDiv className="justify" onClick={() => setRating(!Rating)}>
-          <selectType>Ratings</selectType>
+          <SelectType>Ratings</SelectType>
           {Rating ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
         </FlexDiv>
         {Rating && (

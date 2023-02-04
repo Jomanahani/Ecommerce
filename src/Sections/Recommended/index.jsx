@@ -14,7 +14,7 @@ import item10 from "../../Assetse/item10.png";
 
 export const SectionTitle = styled.h3`
   font-size: 1.7rem;
-  color: #1c1c1c;
+  color: ${(props) => props.theme.pallet.primaryText};
   padding: 0.8rem 0;
   padding-left: 2.1rem;
 `;
@@ -28,7 +28,7 @@ export const RecommendedContaner = styled.div`
 `;
 export default function Recommended() {
   return (
-    <section>
+    <>
       <SectionTitle>Recommended items</SectionTitle>
       <RecommendedContaner>
         <RecommendedItem
@@ -82,6 +82,6 @@ export default function Recommended() {
           Descrption="Jeans bag for travel for men"
         />
       </RecommendedContaner>
-    </section>
+    </>
   );
 }

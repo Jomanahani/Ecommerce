@@ -1,14 +1,16 @@
 import React from "react";
 
+import { PageContent, PageLayout } from "../SelectedItems/style";
+import { Container } from "../../global/style";
 import ElectronicsItem from "../../Components/ElectronicsItem";
 import SideBar from "../../Components/SideBar";
+import ItemPath from "../../Components/ItemPath";
+import ItemFilter from "../../Components/ItemFilter";
 
 import Footer from "../../Sections/Footer";
 import Header from "../../Sections/Header";
 import Subscribe from "../../Sections/Subscribe";
-
-import { Container } from "../../global/style";
-import { PageContent, PageLayout } from "../SelectedItems/style";
+import { RecommendedContaner } from "../../Sections/Recommended";
 
 import stars4 from "../../Assetse/stars4.png";
 import stars3 from "../../Assetse/stars3.png";
@@ -19,10 +21,6 @@ import select4 from "../../Assetse/select4.png";
 import select5 from "../../Assetse/select5.png";
 import elect2 from "../../Assetse/elect2.png";
 import elect5 from "../../Assetse/elect5.png";
-import { RecommendedContaner } from "../../Sections/Recommended";
-import ItemPath from "../../Components/ItemPath";
-import ItemFilter from "../../Components/ItemFilter";
-import ShowItem from "../../Components/ShowItem";
 
 export default function Electronics() {
   return (

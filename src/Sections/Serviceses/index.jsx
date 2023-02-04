@@ -10,7 +10,7 @@ import services4 from "../../Assetse/services4.png";
 
 export default function serviceses() {
   return (
-    <section>
+    <>
       <SectionTitle>Our extra services</SectionTitle>
       <RecommendedContaner>
         <Services src={services1} name="source from Industry Hubs" />
@@ -21,6 +21,6 @@ export default function serviceses() {
         />
         <Services src={services4} name="Product monitoring and inspection" />
       </RecommendedContaner>
-    </section>
+    </>
   );
 }

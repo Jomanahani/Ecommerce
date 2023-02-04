@@ -1,5 +1,6 @@
 import React from "react";
 import ItemDescription from "../../Components/ItemDescription";
+import ItemPath from "../../Components/ItemPath";
 import MayLike from "../../Components/MayLike";
 import Related from "../../Components/Related";
 import ShowItem from "../../Components/ShowItem";
@@ -15,6 +16,7 @@ export default function Item() {
     <>
       <Header />
       <Container>
+        <ItemPath />
         <ShowItem />
         <FlexDiv className="start">
           <ItemDescription />

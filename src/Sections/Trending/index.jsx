@@ -16,7 +16,8 @@ const TrendingSec = styled.div`
   height: 25rem;
   background-color: ${(props) => props.theme.pallet.mainBackdround};
   border: 1px solid ${(props) => props.theme.pallet.Lines};
-  margin: 0 auto;
+  margin: 1rem auto;
+  margin-top: 2rem;
   border-radius: 0.5rem;
 `;
 const TrendingUl = styled.ul`
@@ -30,7 +31,7 @@ const TrendingLi = styled.li`
   color: ${(props) => props.theme.pallet.secondaryText};
   border-radius: 0.3rem;
   &:hover {
-    color: ${(props) => props.theme.pallet.primaryText};
+    color: #1C1C1C;
     font-weight: 600;
     background-color: ${(props) => props.theme.pallet.secondary};
   }

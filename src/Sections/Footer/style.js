@@ -29,7 +29,7 @@ export const UpperFooter = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
+  background-color: ${(props) => props.theme.pallet.Footer};
 `;
 export const About = styled.p`
   font-size: 1rem;
