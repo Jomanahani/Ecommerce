@@ -9,10 +9,11 @@ export const ShowDiv = styled.div`
   border: 1px solid ${(props) => props.theme.pallet.Lines};
   border-radius: 0.5rem;
   padding: 0.4rem;
-  margin: 1rem auto;
+  margin: 0 auto;
+  margin-bottom: 1rem;
   & img {
-    margin-right: 0.5rem;
-    margin-top: 0.4rem;
+    margin-right: 0.8rem;
+    margin-top: 0.5rem;
   }
 `;
 export const InnerDiv = styled.div`
@@ -70,7 +71,6 @@ export const ItemTitle = styled(Title)`
 `;
 export const ItemImage = styled.img`
   width: 100%;
-  padding: 0 0.3rem;
   border: 1px solid ${(props) => props.theme.pallet.Lines};
   border-radius: 0.5rem;
 `;
@@ -80,8 +80,8 @@ export const HR = styled.hr`
   margin: 0.3rem 0;
 `;
 export const Dot = styled.div`
-  height: 0.6rem;
-  width: 0.6rem;
+  height: 0.5rem;
+  width: 0.5rem;
   background-color: #dbdbdb;
   border-radius: 50%;
 `;

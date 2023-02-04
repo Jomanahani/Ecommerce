@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Title } from "../../Sections/Categories/style";
+
 import { Information } from "../MayLike";
-import { FlexDiv } from "../SignInForm/style";
+import { FlexDiv, FormTitle } from "../SignInForm/style";
 
 import gray1 from "../../Assetse/gray1.png";
 import gray2 from "../../Assetse/gray2.png";
@@ -13,7 +13,8 @@ import gray6 from "../../Assetse/gray6.png";
 
 export const RelatedDiv = styled.div`
   width: 100%;
-  padding: 1rem;
+  padding: 0 1rem;
+  padding-bottom: 1rem;
   background-color: ${(props) => props.theme.pallet.mainBackdround};
   border: 1px solid ${(props) => props.theme.pallet.Lines};
   border-radius: 0.5rem;
@@ -37,7 +38,7 @@ export const ImageDiv = styled.div`
 export default function Related() {
   return (
     <RelatedDiv>
-      <h3>Related products</h3>
+      <FormTitle>Related products</FormTitle>
       <FlexDiv className="justify">
         <div>
           <img src={gray1} alt="itemImg" />

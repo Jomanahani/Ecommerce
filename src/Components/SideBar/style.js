@@ -9,8 +9,9 @@ export const SidebarItem = styled.div`
   width: 100%;
   padding: 1rem;
   border-top: 1px solid ${(props) => props.theme.pallet.Lines};
+  color: ${(props) => props.theme.pallet.primaryText};
 `;
-export const selectType = styled.p`
+export const SelectType = styled.p`
   font-size: 1.2rem;
   font-weight: 600;
   color: ${(props) => props.theme.pallet.primaryText};

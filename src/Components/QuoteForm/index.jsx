@@ -18,6 +18,7 @@ const QuForm = styled.form`
   box-shadow: 2px 2px 6px #babec1;
 `;
 const QuoteTitle = styled.h3`
+  color: ${(props) => props.theme.pallet.primaryText};
   font-size: 1.2rem;
   font-weight: 600;
   padding: 1rem 0;

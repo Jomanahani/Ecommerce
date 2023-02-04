@@ -6,6 +6,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import NavBar from "../../Components/NavBar";
 import { Navigation, NavUl, NavItem } from "../../Components/NavBar";
 import germany from "../../Assetse/germany.png";
+import { Link } from "react-router-dom";
 
 const FlexNavItem = styled(NavItem)`
   flex-direction: row;
@@ -24,9 +25,9 @@ export default function Header() {
       <NavBar />
       <Navigation>
         <NavUl>
-          <FlexNavItem>
-            <FaBars /> All category
-          </FlexNavItem>
+        <Link to='/SelectedItems'> <FlexNavItem>
+            <FaBars />{' '}All category
+          </FlexNavItem></Link> 
           <NavItem>Hot offers</NavItem>
           <NavItem>Gift boxes</NavItem>
           <NavItem>Projects</NavItem>

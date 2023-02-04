@@ -8,6 +8,8 @@ import profileSrc from "../../Assetse/Profile.png";
 import MessageSrc from "../../Assetse/Message.png";
 import HeartSrc from "../../Assetse/Heart.png";
 import cartSrc from "../../Assetse/cart.png";
+import Toggle from "../Toggle";
+import { Link } from "react-router-dom";
 
 export const Navigation = styled.nav`
   min-height: 3rem;
@@ -15,7 +17,7 @@ export const Navigation = styled.nav`
   align-items: center;
   justify-content: space-between;
   padding: 0 6%;
-  background-color: white;
+  background-color: ${(props) => props.theme.pallet.mainBackdround};
   border-bottom: 1px solid ${(props) => props.theme.pallet.Lines};
 `;
 export const NavUl = styled.ul`
@@ -31,6 +33,7 @@ export const NavItem = styled.li`
   font-size: 1rem;
   color: ${(props) => props.theme.pallet.primaryText};
   font-weight: 500;
+  cursor: pointer;  
 `;
 const NavName = styled.p`
   font-size: 0.7rem;
@@ -44,20 +47,23 @@ export default function NavBar() {
       <Logo />
       <Search />
       <NavUl>
+      <NavItem>
+        <Toggle/>
+        </NavItem>
         <NavItem>
-          <img src={profileSrc} alt="profile" />
+        <Link to='/Home'><img src={profileSrc} alt="profile" /></Link> 
           <NavName>Profile</NavName>
         </NavItem>
         <NavItem>
-          <img src={MessageSrc} alt="Messgae" />
+         <img src={MessageSrc} alt="Messgae" />
           <NavName>Message</NavName>
         </NavItem>
         <NavItem>
-          <img src={HeartSrc} alt="Heart" />
+        <Link to='/Item'><img src={HeartSrc} alt="Heart" /></Link> 
           <NavName>Orders</NavName>
         </NavItem>
         <NavItem>
-          <img src={cartSrc} alt="cart" />
+        <Link to='/Cart'><img src={cartSrc} alt="cart" /></Link> 
           <NavName>My cart</NavName>
         </NavItem>
       </NavUl>

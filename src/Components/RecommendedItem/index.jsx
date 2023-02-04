@@ -6,7 +6,7 @@ const RecomItem = styled.div`
   width: 14.5rem;
   border: 1px solid ${(props) => props.theme.pallet.Lines};
   border-radius: 0.3rem;
-  background-color: white;
+  background-color: ${(props) => props.theme.pallet.mainBackdround};
 `;
 const ItemImg = styled.img`
   display: flex;
@@ -16,7 +16,7 @@ const ItemImg = styled.img`
 const Price = styled.p`
   font-size: 1rem;
   font-weight: 500;
-  color: #1c1c1c;
+  color:${(props) => props.theme.pallet.primaryText};
   padding-top: 0.5rem;
   padding-left: 0.7rem;
 `;

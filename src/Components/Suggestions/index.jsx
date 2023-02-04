@@ -6,7 +6,7 @@ import {BsCart3} from 'react-icons/bs'
 import { Information } from '../MayLike';
 import {RelatedDiv} from'../Related'
 import { ItemP } from '../ItemCard';
-import { FlexDiv } from "../SignInForm/style";
+import { FlexDiv, FormTitle } from "../SignInForm/style";
 
 import gray1 from "../../Assetse/gray1.png";
 import gray2 from "../../Assetse/gray2.png";
@@ -36,8 +36,7 @@ color:  ${(props) => props.theme.pallet.primary};
 export default function Suggestions() {
   return (
       <SuggestionsDiv>
-
-          <h3>Related products</h3>
+          <FormTitle>Related products</FormTitle>
           <FlexDiv className="justify">
           <div>
           <img src={gray1} alt="itemImg" />

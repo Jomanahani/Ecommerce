@@ -11,6 +11,7 @@ const SubscribeSec = styled.div`
   background-color: ${(props) => props.theme.pallet.secondaryBackdround};
 `;
 const SubsTitle = styled.h4`
+  color: ${(props) => props.theme.pallet.primaryText};
   text-align: center;
   font-size: 1.2rem;
 `;
