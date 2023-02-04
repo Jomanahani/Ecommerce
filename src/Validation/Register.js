@@ -1,8 +1,8 @@
 import * as yup from "yup";
 
 export const RegisterSchema = yup.object().shape({
-  Name: yup.string().required(),
-  userName: yup.string().required(),
+  Name: yup.string().required('Name is required'),
+  userName: yup.string().required('User Name is required'),
   email: yup
     .string()
     .email("email not valid")

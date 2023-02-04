@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const SignForm = styled.form`
   position: relative;
-  top: 10%;
+  top: 8%;
   display: flex;
   flex-direction: column;
   margin: auto;
   padding: 1rem 2rem;
-  height: 33rem;
+  height: 34rem;
   width: 23rem;
   border: 1px solid ${(props) => props.theme.pallet.Lines};
   background-color: ${(props) => props.theme.pallet.mainBackdround};
@@ -28,14 +28,18 @@ export const FormLabel = styled.label`
 export const Forminput = styled.input`
   width: 18.5rem;
   border: 1px solid ${(props) => props.theme.pallet.Lines};
-  color: ${(props) => props.theme.pallet.secondaryText};
-  font-size: 0.8rem;
+  color: ${(props) => props.theme.pallet.primaryText};
+  font-size: 1rem;
   padding: 0.7rem;
   margin: 0.2rem auto;
+  outline: none;
   border-radius: 0.3rem;
   &.small{
     width: 8.8rem;
     margin-right: 0.6rem;
+  }
+  &.error{
+    border: 1px solid red;
   }
   `;
   
