@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "../src/global/Themes";
 
 import "./index.css";
+import Cart from "./Pages/Cart";
 import Electronics from "./Pages/Electronics";
 import Home from "./Pages/Home";
 import Item from "./Pages/Item";
@@ -21,6 +22,7 @@ function App() {
         <Route path="/SelectedItems" element={<SelectedItems /> } />
         <Route path="/Electronics" element={<Electronics /> } />
         <Route path="/Item" element={<Item /> } />
+        <Route path="/Cart" element={<Cart /> } />
         </Routes>
         {/* <Home /> */}
         {/* <SignIn /> */}

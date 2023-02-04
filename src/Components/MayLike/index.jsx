@@ -27,6 +27,11 @@ export const Information = styled.p`
     color: #8b96a5;
     padding-top: 0.2rem;
   }
+  &.desc{
+    color: #606060;
+    padding: 0.5rem 0;
+    padding-right: 20% ;
+  }
 `;
 
 export default function MayLike() {
