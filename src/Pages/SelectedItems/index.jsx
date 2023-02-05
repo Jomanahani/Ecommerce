@@ -3,9 +3,6 @@ import React from "react";
 import ItemCard from "../../Components/ItemCard";
 import { Container } from "../../global/style";
 import { PageLayout ,PageContent } from "./style";
-import Footer from "../../Sections/Footer";
-import Header from "../../Sections/Header";
-import Subscribe from "../../Sections/Subscribe";
 import SideBar from "../../Components/SideBar";
 
 import select1 from "../../Assetse/select1.png";

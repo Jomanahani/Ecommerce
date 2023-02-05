@@ -75,10 +75,10 @@ export default function ItemFilter(props) {
           <RiArrowDownSLine />
         </Featured>
         <Featured className="icons">
-          <IconDIV className={props.selected ? "selected" : ""} onClick={()=>{navigate("/SelectedItems");}}>
+          <IconDIV className={props.selected ? "selected" : ""} onClick={()=>{navigate("/selectedItems");}}>
             <AiFillAppstore />
           </IconDIV>
-          <IconDIV className={props.electronic ? "selected right" : "right"} onClick={()=>{navigate("/Electronics");}}>
+          <IconDIV className={props.electronic ? "selected right" : "right"} onClick={()=>{navigate("/electronics");}}>
             <FaBars />
           </IconDIV>
         </Featured>

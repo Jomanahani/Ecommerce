@@ -9,10 +9,10 @@ const Cart = lazy(() => import('../Pages/Cart'));
 
 export const PATHS = {
     HOME: '/',
-    SELECTEDITEMS:'/SelectedItems',
-    ELECTRONICS:'/Electronics',
-    ITEM:'/Item',
-    CART: '/Cart',
+    SELECTEDITEMS:'/selectedItems',
+    ELECTRONICS:'/electronics',
+    ITEM:'/item',
+    CART: '/cart',
   };
 
 export const router =[

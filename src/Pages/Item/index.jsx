@@ -7,9 +7,7 @@ import ShowItem from "../../Components/ShowItem";
 import { FlexDiv } from "../../Components/SignInForm/style";
 import { Container } from "../../global/style";
 import Discount from "../../Sections/Discount";
-import Footer from "../../Sections/Footer";
-import Header from "../../Sections/Header";
-import Subscribe from "../../Sections/Subscribe";
+
 
 export default function Item() {
   return (

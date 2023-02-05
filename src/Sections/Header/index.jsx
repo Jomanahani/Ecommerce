@@ -6,7 +6,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import NavBar from "../../Components/NavBar";
 import { Navigation, NavUl, NavItem } from "../../Components/NavBar";
 import germany from "../../Assetse/germany.png";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const FlexNavItem = styled(NavItem)`
   flex-direction: row;
@@ -20,14 +20,14 @@ export const Country = styled.img`
 
 export default function Header() {
   const { pathname } = useLocation();
-  const currnetUser = pathname.includes("/Cart");
+  const currnetUser = pathname.includes("/cart");
   return (
     <>
       <NavBar />
       {!currnetUser && (
         <Navigation>
           <NavUl>
-            <Link to="/SelectedItems">
+            <Link to="/selectedItems">
               {" "}
               <FlexNavItem>
                 <FaBars /> All category

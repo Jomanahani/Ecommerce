@@ -1,6 +1,5 @@
-import { drawerClasses } from "@mui/material";
 import { Suspense, useEffect, useState } from "react";
-import { Route, Routes, useRoutes } from "react-router";
+import { useRoutes } from "react-router";
 import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "../src/global/Themes";
 import { themeContext } from "./Context/ThemeContext";
