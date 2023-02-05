@@ -64,6 +64,11 @@ export const ItemP = styled.p`
     font-weight: 600;
     padding: 0;
   }
+  &.flex{
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 500;
+  }
 `;
 export const Rate = styled.img`
   height: 1rem;

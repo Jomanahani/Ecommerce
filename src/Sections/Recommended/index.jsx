@@ -17,6 +17,9 @@ export const SectionTitle = styled.h3`
   color: ${(props) => props.theme.pallet.primaryText};
   padding: 0.8rem 0;
   padding-left: 2.1rem;
+  &.normal{
+    padding-left: 0;
+  }
 `;
 export const RecommendedContaner = styled.div`
   display: flex;
