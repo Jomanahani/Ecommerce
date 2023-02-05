@@ -89,10 +89,13 @@ export default function ItemDescription() {
           pariatur.
         </p>
         <Table>
+          <thead>
           <tr>
             <TData className="type">Model</TData>
             <TData className="info">#8786867</TData>
           </tr>
+          </thead>
+          <tbody>
           <tr>
             <TData className="type">Style</TData>
             <TData className="info">Classic style</TData>
@@ -105,10 +108,13 @@ export default function ItemDescription() {
             <TData className="type">Size</TData>
             <TData className="info">34mm x 450mm x 19mm</TData>
           </tr>
+          </tbody>
+          <tfoot>
           <tr>
             <TData className="type">Memory</TData>
             <TData className="info">36GB RAM</TData>
           </tr>
+          </tfoot>
         </Table>
         <CheckList>
           <li>

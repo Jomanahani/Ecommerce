@@ -14,7 +14,6 @@ import Subscribe from "../../Sections/Subscribe";
 export default function Item() {
   return (
     <>
-      <Header />
       <Container>
         <ItemPath />
         <ShowItem />
@@ -25,8 +24,6 @@ export default function Item() {
         <Related/>
         <Discount/>
       </Container>
-      <Subscribe />
-      <Footer />
     </>
   );
 }

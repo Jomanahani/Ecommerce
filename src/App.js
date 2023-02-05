@@ -1,50 +1,39 @@
-import { useEffect, useState } from "react";
-import { Route, Routes } from "react-router";
+import { drawerClasses } from "@mui/material";
+import { Suspense, useEffect, useState } from "react";
+import { Route, Routes, useRoutes } from "react-router";
 import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "../src/global/Themes";
-import { themeContext } from './Context/ThemeContext';
+import { themeContext } from "./Context/ThemeContext";
 import { GlobalStyle } from "./global/style";
 
 import "./index.css";
-import Cart from "./Pages/Cart";
-import Electronics from "./Pages/Electronics";
-import Home from "./Pages/Home";
-import Item from "./Pages/Item";
-import Register from "./Pages/Register";
-import SelectedItems from "./Pages/SelectedItems";
-import SignIn from "./Pages/SignIn";
+import { router as routes } from "./Router";
+import Footer from "./Sections/Footer";
+import Header from "./Sections/Header";
+import Subscribe from "./Sections/Subscribe";
 
 function App() {
-  const localTheme = localStorage.getItem('theme')
-  const [theme, setTheme] = useState( lightTheme);
-  console.log(localTheme)
+  const router = useRoutes(routes);
+
+  const [theme, setTheme] = useState(lightTheme);
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
+    const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
-      setTheme(savedTheme==='light'?lightTheme:darkTheme);
+      setTheme(savedTheme === "light" ? lightTheme : darkTheme);
     }
   }, []);
-  
-  useEffect(() => {
-    localStorage.setItem('theme', theme.theme);
-    }, [theme]);
 
   return (
     <ThemeProvider theme={theme}>
       <themeContext.Provider value={[theme, setTheme]}>
-      <div className="App">
-      <GlobalStyle />
-        <Routes>
-        <Route path="/" element={<Register />} />
-        <Route path="/SignIn" element={<SignIn />} />
-        <Route path="/Home" element={<Home /> } />
-        <Route path="/SelectedItems" element={<SelectedItems /> } />
-        <Route path="/Electronics" element={<Electronics /> } />
-        <Route path="/Item" element={<Item /> } />
-        <Route path="/Cart" element={<Cart /> } />
-        </Routes>
-      </div>
+        <div className="App">
+          <GlobalStyle />
+          <Header />
+          <Suspense fallback={<div className='spinner' />}>{router}</Suspense>
+          <Subscribe />
+          <Footer />
+        </div>
       </themeContext.Provider>
     </ThemeProvider>
   );

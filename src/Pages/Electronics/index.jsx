@@ -25,7 +25,6 @@ import elect5 from "../../Assetse/elect5.png";
 export default function Electronics() {
   return (
     <>
-      <Header />
       <Container>
         <ItemPath />
         <PageLayout>
@@ -91,8 +90,6 @@ export default function Electronics() {
           </PageContent>
         </PageLayout>
       </Container>
-      <Subscribe />
-      <Footer />
     </>
   );
 }

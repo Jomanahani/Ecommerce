@@ -51,7 +51,7 @@ export default function NavBar() {
         <Toggle/>
         </NavItem>
         <NavItem>
-        <Link to='/Home'><img src={profileSrc} alt="profile" /></Link> 
+        <Link to='/'><img src={profileSrc} alt="profile" /></Link> 
           <NavName>Profile</NavName>
         </NavItem>
         <NavItem>

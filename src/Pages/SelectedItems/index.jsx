@@ -20,7 +20,6 @@ import ItemFilter from "../../Components/ItemFilter";
 export default function SelectedItems() {
   return (
     <>
-      <Header />
       <Container>
       <ItemPath/>
         <PageLayout>
@@ -83,8 +82,6 @@ export default function SelectedItems() {
         </PageContent>
         </PageLayout>
       </Container>
-      <Subscribe />
-      <Footer />
     </>
   );
 }

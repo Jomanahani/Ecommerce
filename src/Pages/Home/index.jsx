@@ -15,7 +15,6 @@ import Trending from "../../Sections/Trending";
 export default function Home() {
   return (
     <>
-      <Header />
       <Container>
         <Trending />
         <Offers />
@@ -25,8 +24,6 @@ export default function Home() {
         <Serviceses />
         <RegionSec />
       </Container>
-      <Subscribe />
-      <Footer />
     </>
   );
 }
