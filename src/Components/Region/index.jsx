@@ -48,6 +48,9 @@ export const Div = styled.div`
     color: ${(props) => props.theme.pallet.secondaryText};
     letter-spacing: 0.6px;
   }
+  &.cart{
+    padding: 0 1rem;
+  }
 `;
 export default function Region(props) {
   return (
