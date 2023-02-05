@@ -51,7 +51,7 @@ export default function NavBar() {
         <Toggle/>
         </NavItem>
         <NavItem>
-        <Link to='/Home'><img src={profileSrc} alt="profile" /></Link> 
+        <Link to='/'><img src={profileSrc} alt="profile" /></Link> 
           <NavName>Profile</NavName>
         </NavItem>
         <NavItem>
@@ -59,11 +59,11 @@ export default function NavBar() {
           <NavName>Message</NavName>
         </NavItem>
         <NavItem>
-        <Link to='/Item'><img src={HeartSrc} alt="Heart" /></Link> 
+        <Link to='/item'><img src={HeartSrc} alt="Heart" /></Link> 
           <NavName>Orders</NavName>
         </NavItem>
         <NavItem>
-        <Link to='/Cart'><img src={cartSrc} alt="cart" /></Link> 
+        <Link to='/cart'><img src={cartSrc} alt="cart" /></Link> 
           <NavName>My cart</NavName>
         </NavItem>
       </NavUl>

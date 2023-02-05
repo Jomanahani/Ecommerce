@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import RegisterButton, { RegButton } from "../RegisterButton";
+
 import { AiFillFacebook } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
+
+import RegisterButton, { RegButton } from "../RegisterButton";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import {
   FlexDiv,
@@ -12,7 +14,6 @@ import {
   SignForm,
 } from "./style";
 import { SignIn } from "../../Validation/SignInValid";
-import { createGlobalStyle } from "styled-components";
 import { Error } from "../RegisterForm";
 
 const style = { fontSize: "1rem", margin: "0 2rem 0 0" };
@@ -23,6 +24,7 @@ export default function SignInForm() {
     password: "",
   });
   const [errors, setErrors] = useState({});
+  const [isAuthorized, setIsAuthorized] = useState(false);
 
   const navigate = useNavigate();
 
@@ -37,7 +39,7 @@ export default function SignInForm() {
     e.preventDefault();
     try {
       await SignIn(Data);
-      console.log("valid");
+      setIsAuthorized(true)
       navigate("/home");
     } catch (error) {
       setErrors(

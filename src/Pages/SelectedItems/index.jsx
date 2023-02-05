@@ -3,9 +3,6 @@ import React from "react";
 import ItemCard from "../../Components/ItemCard";
 import { Container } from "../../global/style";
 import { PageLayout ,PageContent } from "./style";
-import Footer from "../../Sections/Footer";
-import Header from "../../Sections/Header";
-import Subscribe from "../../Sections/Subscribe";
 import SideBar from "../../Components/SideBar";
 
 import select1 from "../../Assetse/select1.png";
@@ -20,7 +17,6 @@ import ItemFilter from "../../Components/ItemFilter";
 export default function SelectedItems() {
   return (
     <>
-      <Header />
       <Container>
       <ItemPath/>
         <PageLayout>
@@ -83,8 +79,6 @@ export default function SelectedItems() {
         </PageContent>
         </PageLayout>
       </Container>
-      <Subscribe />
-      <Footer />
     </>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useCallback, useContext } from "react";
 
 import { themeContext } from "../../Context/ThemeContext";
 import { darkTheme, lightTheme } from "../../global/Themes";
@@ -19,15 +19,20 @@ export const ToggleButton = styled.button`
 export default function Toggle() {
   const [theme, setTheme] = useContext(themeContext);
 
+  const SetToggleTheme = useCallback(() => {
+    setTheme((prevState) =>
+      prevState.theme === "light" ? darkTheme : lightTheme
+    );
+    if (theme.theme === "light") {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+  }, [setTheme, theme]);
+  
   return (
     <>
-      <ToggleButton
-        onClick={() =>
-          setTheme((prevState) =>
-            prevState.theme === "light" ? darkTheme : lightTheme
-          )
-        }
-      >
+      <ToggleButton onClick={SetToggleTheme}>
         {theme.theme === "light" ? (
           <BsFillMoonStarsFill />
         ) : (

@@ -7,9 +7,6 @@ import SideBar from "../../Components/SideBar";
 import ItemPath from "../../Components/ItemPath";
 import ItemFilter from "../../Components/ItemFilter";
 
-import Footer from "../../Sections/Footer";
-import Header from "../../Sections/Header";
-import Subscribe from "../../Sections/Subscribe";
 import { RecommendedContaner } from "../../Sections/Recommended";
 
 import stars4 from "../../Assetse/stars4.png";
@@ -25,7 +22,6 @@ import elect5 from "../../Assetse/elect5.png";
 export default function Electronics() {
   return (
     <>
-      <Header />
       <Container>
         <ItemPath />
         <PageLayout>
@@ -91,8 +87,6 @@ export default function Electronics() {
           </PageContent>
         </PageLayout>
       </Container>
-      <Subscribe />
-      <Footer />
     </>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const SubsForm = styled.form`
@@ -25,14 +25,28 @@ export const SubsButton = styled.button`
   border-radius: 0.6rem;
   border: none;
   outline: none;
-  &.orang{
-    background-color: #FF9017;
+  &.orang {
+    background-color: #ff9017;
   }
 `;
 export default function SubscribeForm() {
+  const [value, setValue] = useState("");
+
+  const handleChange = (e) => {
+    setValue(e.target.value);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
-    <SubsForm>
-      <SubsInput type="text" id="Subscribe" placeholder="&#x2709; Email" />
+    <SubsForm onSubmit={handleSubmit}>
+      <SubsInput
+        type="text"
+        id="Subscribe"
+        value={value}
+        onChange={handleChange}
+        placeholder="&#x2709; Email"
+      />
       <SubsButton type="submit">Shop now</SubsButton>
     </SubsForm>
   );

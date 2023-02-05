@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { useState } from "react";
 
 import { Flex } from "../../Sections/Footer/style";
 import { SubsButton } from "../SubscribeForm";
@@ -62,15 +61,14 @@ const Select = styled.select`
 `;
 
 export default function QuoteForm() {
-  const [selectValue, setSelectValue] = useState("");
-  return (
+    return (
     <QuForm>
       <QuoteTitle>Send quote to suppliers</QuoteTitle>
       <Input type="text" placeholder="What item you need?" className="item" />
       <TextArea placeholder="Type more details" />
       <Flex>
         <Input type="text" placeholder="Quantity" className="quantity" />
-        <Select value={selectValue}>
+        <Select>
           <option value="Pcs">Pcs</option>
           <option value="option2">Pcs</option>
           <option value="option3">Pcs</option>
