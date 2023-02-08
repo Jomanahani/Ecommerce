@@ -4,7 +4,7 @@ import { AiFillFacebook } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 
 import RegisterButton, { RegButton } from "../RegisterButton";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   FlexDiv,
   Forminput,
@@ -15,6 +15,7 @@ import {
 } from "./style";
 import { SignIn } from "../../Validation/SignInValid";
 import { Error } from "../RegisterForm";
+import { PATHS } from "../../Router";
 
 const style = { fontSize: "1rem", margin: "0 2rem 0 0" };
 
@@ -39,7 +40,8 @@ export default function SignInForm() {
     e.preventDefault();
     try {
       await SignIn(Data);
-      setIsAuthorized(true)
+      console.log(isAuthorized);
+      setIsAuthorized(true);
       navigate("/home");
     } catch (error) {
       setErrors(
@@ -66,7 +68,8 @@ export default function SignInForm() {
       {errors.email && <Error>{errors.email}</Error>}
 
       <FlexDiv className="justify">
-        <FormLabel>Password</FormLabel> <a href="#">Forgot Password</a>
+        <FormLabel>Password</FormLabel>{" "}
+        <Link to={PATHS.SIGNUP}>Forgot Password</Link>
       </FlexDiv>
       <Forminput
         type="text"
@@ -97,7 +100,7 @@ export default function SignInForm() {
         <AiFillFacebook style={style} /> Continue with Facebook
       </RegButton>
       <p>
-        Don’t have an account? <Link to="/">Register now</Link>
+        Don’t have an account? <Link to={PATHS.SIGNUP}>Register now</Link>
       </p>
     </SignForm>
   );

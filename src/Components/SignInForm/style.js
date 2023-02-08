@@ -22,6 +22,7 @@ export const FormTitle = styled.h3`
   color: ${(props) => props.theme.pallet.primaryText};
 `;
 export const FormLabel = styled.label`
+  color: ${(props) => props.theme.pallet.primaryText};
   font-size: 1rem;
   padding: 0.5rem 0;
 `;
@@ -34,15 +35,15 @@ export const Forminput = styled.input`
   margin: 0.2rem auto;
   outline: none;
   border-radius: 0.3rem;
-  &.small{
+  &.small {
     width: 8.8rem;
     margin-right: 0.6rem;
   }
-  &.error{
+  &.error {
     border: 1px solid red;
   }
-  `;
-  
+`;
+
 export const Or = styled.div`
   display: flex;
   justify-content: center;
@@ -68,17 +69,17 @@ export const FlexDiv = styled.div`
     justify-content: space-between;
     align-items: center;
   }
-  &.align{
+  &.align {
     align-items: center;
     padding-top: 0.5rem;
     margin: 0;
   }
-  &.detail{
+  &.detail {
     justify-content: space-between;
     align-items: center;
-    color: #787A80;
+    color: #787a80;
   }
-  &.start{
+  &.start {
     align-items: flex-start;
     justify-content: space-between;
   }
