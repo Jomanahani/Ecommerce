@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import PhoneInput from "react-phone-number-input";
+// import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import styled from "styled-components";
 import RegisterButton from "../RegisterButton";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Forminput,
   FormLabel,
@@ -13,6 +13,7 @@ import {
   FlexDiv,
 } from "../SignInForm/style";
 import { RegisterSchema } from "../../Validation/Register";
+import { PATHS } from "../../Router";
 // import PhoneInput from "react-phone-input-2";
 
 // styled component
@@ -160,7 +161,7 @@ export default function RegisterForm() {
       </FlexDiv>
       <Hr />
       <Logn>
-        Already have an accaunt?<Link to="/SignIn"> Logn in </Link>
+        Already have an accaunt?<Link to={PATHS.LOGIN}> Logn in </Link>
       </Logn>
     </RegForm>
   );

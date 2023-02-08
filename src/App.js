@@ -1,20 +1,19 @@
 import { Suspense, useEffect, useState } from "react";
-import { useRoutes } from "react-router";
 import { ThemeProvider } from "styled-components";
-import { darkTheme, lightTheme } from "../src/global/Themes";
-import { themeContext } from "./Context/ThemeContext";
-import { GlobalStyle } from "./global/style";
 
+// style
+import { darkTheme, lightTheme } from "../src/global/Themes";
+import { GlobalStyle } from "./global/style";
 import "./index.css";
-import { router as routes } from "./Router";
-import Footer from "./Sections/Footer";
-import Header from "./Sections/Header";
-import Subscribe from "./Sections/Subscribe";
+
+// context
+import { AuthContext } from "./Context/authContext";
+import { themeContext } from "./Context/ThemeContext";
+import { Auth, NotAuth } from "./Router";
 
 function App() {
-  const router = useRoutes(routes);
-
   const [theme, setTheme] = useState(lightTheme);
+  const [isAuthorized, setIsAuthorized] = useState(false);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -25,15 +24,16 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <themeContext.Provider value={[theme, setTheme]}>
-        <div className="App">
-          <GlobalStyle />
-          <Header />
-          <Suspense fallback={<div className='spinner' />}>{router}</Suspense>
-          <Subscribe />
-          <Footer />
-        </div>
-      </themeContext.Provider>
+      <AuthContext.Provider value={[isAuthorized, setIsAuthorized]}>
+        <themeContext.Provider value={[theme, setTheme]}>
+          <div className="App">
+            <GlobalStyle />
+            <Suspense fallback={<div className="spinner" />}>
+              {isAuthorized ? <Auth /> : <NotAuth />}
+            </Suspense>
+          </div>
+        </themeContext.Provider>
+      </AuthContext.Provider>
     </ThemeProvider>
   );
 }

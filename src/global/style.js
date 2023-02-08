@@ -9,12 +9,15 @@ export const GlobalStyle = createGlobalStyle`
 }
 body{
 background-color:${(props) => props.theme.pallet.page};
+font-family: 'Inter', sans-serif;
+}
+body a {
+  text-decoration: none;
+  color: rgb(65, 123, 225);
 }
 `;
-
 export const Container = styled.div`
   width: 100%;
   padding: 0 7%;
   margin: 0 auto;
-  /* background-color: #f7fafc; */
 `;

@@ -18,7 +18,7 @@ export const darkTheme = {
   pallet: {
     primary: "#0D6EFD",
     secondary: "#E3F0FF",
-    primaryText: "#f7fafc",
+    primaryText: "#e3e8ec",
     secondaryText: "#8b96a5",
     page: "#23272f",
     mainBackdround: "#343a46",
