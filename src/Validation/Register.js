@@ -8,10 +8,8 @@ export const RegisterSchema = yup.object().shape({
     .email("email not valid")
     .min(8)
     .required("Enter your email"),
-//   phone: yup
-//     .string()
-//     .matches(/^\+(?:[0-9] ?){6,14}[0-9]$/, "Invalid phone number")
-//     .required("Phone number is required"),
+  phone: yup.number("phone must be a number")
+    .required("Phone number is required"),
   password: yup
     .string()
     .min(8, "password must be at least 8 characters")

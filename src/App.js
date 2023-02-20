@@ -14,11 +14,16 @@ import { Auth, NotAuth } from "./Router";
 function App() {
   const [theme, setTheme] = useState(lightTheme);
   const [isAuthorized, setIsAuthorized] = useState(false);
+  console.log("isAuthorized", isAuthorized);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
       setTheme(savedTheme === "light" ? lightTheme : darkTheme);
+    }
+    const token = localStorage.getItem("token");
+    if (token) {
+      setIsAuthorized(true);
     }
   }, []);
 

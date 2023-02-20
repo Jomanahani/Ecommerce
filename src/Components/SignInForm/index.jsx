@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import { AiFillFacebook } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
@@ -16,6 +16,9 @@ import {
 import { SignIn } from "../../Validation/SignInValid";
 import { Error } from "../RegisterForm";
 import { PATHS } from "../../Router";
+import { AuthContext } from "../../Context/authContext";
+import { API_URL } from "../../config/api";
+import axios from "axios";
 
 const style = { fontSize: "1rem", margin: "0 2rem 0 0" };
 
@@ -23,10 +26,11 @@ export default function SignInForm() {
   const [Data, setData] = useState({
     email: "",
     password: "",
+    isLoading: false,
   });
   const [errors, setErrors] = useState({});
-  const [isAuthorized, setIsAuthorized] = useState(false);
-
+  const [token, setToken] = useState();
+  const [isAuthorized, setIsAuthorized] = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -36,13 +40,27 @@ export default function SignInForm() {
     });
   };
 
-  const handelSbmit = async (e) => {
+  const handelSubmit = async (e) => {
     e.preventDefault();
+
     try {
+      setData({
+        ...Data,
+        isLoading: true,
+      });
       await SignIn(Data);
-      console.log(isAuthorized);
-      setIsAuthorized(true);
-      navigate("/home");
+
+      const res = await axios.post(`${API_URL}/users/login`, {
+        email: Data.email,
+        password: Data.password,
+      });
+
+      if (res) {
+        setIsAuthorized(true);
+        setToken(res.data.token);
+        localStorage.setItem("token", res.data.token);
+        // navigate(PATHS.HOME);
+      }
     } catch (error) {
       setErrors(
         error.inner.reduce((errors, error) => {
@@ -50,11 +68,15 @@ export default function SignInForm() {
           return errors;
         }, {})
       );
-      console.log(errors);
+    } finally {
+      setData({
+        ...Data,
+        isLoading: false,
+      });
     }
   };
   return (
-    <SignForm onSubmit={handelSbmit}>
+    <SignForm onSubmit={handelSubmit}>
       <FormTitle>Sign in</FormTitle>
       <FormLabel>Username</FormLabel>
       <Forminput
@@ -79,14 +101,14 @@ export default function SignInForm() {
         onChange={handleChange}
         placeholder="Type here"
       />
-      {errors.password && <p style={{ color: "red" }}>{errors.password}</p>}
+      {errors.password && <Error>{errors.password}</Error>}
 
       <FlexDiv>
         <input type="checkbox" />
         <FormLabel> Remember me </FormLabel>
       </FlexDiv>
 
-      <RegisterButton title="Log In" />
+      <RegisterButton title={Data.isLoading?"Loading...":"Log In" }/>
 
       <Or>
         <hr /> <p>OR</p> <hr />

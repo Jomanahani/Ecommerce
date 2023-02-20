@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-// import PhoneInput from "react-phone-number-input";
+import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import styled from "styled-components";
 import RegisterButton from "../RegisterButton";
@@ -14,6 +14,11 @@ import {
 } from "../SignInForm/style";
 import { RegisterSchema } from "../../Validation/Register";
 import { PATHS } from "../../Router";
+import axios from "axios";
+import { API_URL } from "../../config/api";
+import { useContext } from "react";
+import { AuthContext } from "../../Context/authContext";
+// import PhoneInput from "react-phone-input-2";
 // import PhoneInput from "react-phone-input-2";
 
 // styled component
@@ -41,13 +46,15 @@ export default function RegisterForm() {
     Name: "",
     userName: "",
     email: "",
-    // phone: '',
+    phone: '',
     country: "",
     password: "",
     RePassword: "",
     checked: true,
+    isLoading: false
   });
   const [errors, setErrors] = useState({});
+  const [isAuthorized, setIsAuthorized] = useContext(AuthContext);
 
   const handleChange = (e) => {
     setuserData({
@@ -63,13 +70,28 @@ export default function RegisterForm() {
     });
   };
 
-  const navigate = useNavigate();
   const createUser = async (e) => {
     e.preventDefault();
     try {
+      setuserData({
+        ...userData,
+        isLoading: true,
+      });
       await RegisterSchema.validate(userData, { abortEarly: false });
-      console.log("valid");
-      navigate("/home");
+      const res = await axios.post(`${API_URL}/users/signup`, {
+        Name : userData.Name,
+        email: userData.email,
+        password: userData.password,
+      });
+
+      console.log(res);
+
+      if(res){
+        setIsAuthorized(true);
+        console.log("valid");
+        localStorage.setItem("token", res.data.token);
+      }
+
     } catch (error) {
       setErrors(
         error.inner.reduce((errors, error) => {
@@ -78,6 +100,11 @@ export default function RegisterForm() {
         }, {})
       );
       console.log(errors);
+    } finally{
+      setuserData({
+        ...userData,
+        isLoading: false,
+      });
     }
   };
 
@@ -121,13 +148,14 @@ export default function RegisterForm() {
         onChange={handleChange}
       />
       {errors.email && <Error>{errors.email}</Error>}
-      {/* <FormLabel>Phone</FormLabel>
+      <FormLabel>Phone</FormLabel>
       <PhoneInput
         className="phone"
         name="phone"
         value={userData.phone}
         onChange={(value) =>setuserData({ phone: value }) }
-      /> */}
+      />
+      {errors.phone && <Error>{errors.phone}</Error>}
       <FormLabel>Password</FormLabel>
       <Forminput
         type="text"
@@ -148,7 +176,7 @@ export default function RegisterForm() {
         onChange={handleChange}
       />
       {errors.RePassword && <Error>{errors.RePassword}</Error>}
-      <RegisterButton title="Register now" />
+      <RegisterButton title={ userData.isLoading? "Loading..." : "Register now" } />
 
       <FlexDiv>
         <input
