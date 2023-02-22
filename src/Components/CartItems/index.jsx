@@ -1,10 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import cart1 from "../../Assetse/cart1.png";
-import cart2 from "../../Assetse/cart2.png";
-import cart3 from "../../Assetse/cart3.png";
-
 import { ItemP } from "../ItemCard";
 import { Information } from "../MayLike";
 import { Div } from "../Region";
@@ -13,8 +9,13 @@ import { FlexDiv } from "../SignInForm/style";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { RxArrowLeft } from "react-icons/rx";
 
+import cart1 from "../../Assetse/cart1.png";
+import cart2 from "../../Assetse/cart2.png";
+import cart3 from "../../Assetse/cart3.png";
+
 const Cart = styled.div`
   width: 70%;
+  /* min-height: 35rem; */
   background-color: ${(props) => props.theme.pallet.mainBackdround};
   border: 1px solid ${(props) => props.theme.pallet.Lines};
   border-radius: 0.5rem;

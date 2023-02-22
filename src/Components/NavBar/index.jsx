@@ -68,7 +68,7 @@ export default function NavBar() {
           <NavName>My cart</NavName>
         </NavItem>
         <NavItem>
-        <LogoutButt />
+        <LogoutButt/>
           <NavName>Logout</NavName>
         </NavItem>
       </NavUl>

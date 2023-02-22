@@ -4,10 +4,7 @@ import styled from "styled-components";
 import { Title } from "../InfoType";
 import { FlexDiv } from "../SignInForm/style";
 
-import like1 from "../../Assetse/like1.png";
-import like2 from "../../Assetse/like2.png";
-import like3 from "../../Assetse/like3.png";
-import like4 from "../../Assetse/like4.png";
+import { mayLikes } from "../../mock/data";
 
 export const LikeDiv = styled.div`
   width: 23%;
@@ -38,7 +35,18 @@ export default function MayLike() {
   return (
     <LikeDiv>
       <Title className="like">You may like</Title>
-      <FlexDiv className="align">
+      {mayLikes.map((item)=>(
+        <FlexDiv key={item.key} className="align">
+        <img src={item.img} alt="itemImage" />
+        <div>
+          <Information className="Name">
+            {item.title}
+          </Information>
+          <Information className="price">{item.price}</Information>
+        </div>
+      </FlexDiv>
+      ))}
+      {/* <FlexDiv className="align">
         <img src={like1} alt="itemImage" />
         <div>
           <Information className="Name">
@@ -82,7 +90,7 @@ export default function MayLike() {
           </Information>
           <Information className="price">$7.00 - $99.50</Information>
         </div>
-      </FlexDiv>
+      </FlexDiv> */}
     </LikeDiv>
   );
 }

@@ -7,6 +7,7 @@ import user from "../../Assetse/user.png";
 
 import ColoredDiv from "../../Components/ColoredDiv";
 import { FlexDiv } from "../../Components/SignInForm/style";
+import { UlItems } from "../../mock/data";
 import { Source } from "../Categories/style";
 import { SectionTitle } from "../Recommended";
 
@@ -90,15 +91,9 @@ export default function Trending() {
     <>
       <TrendingSec>
         <TrendingUl>
-          <TrendingLi>Automobiles</TrendingLi>
-          <TrendingLi>Clothes and wear</TrendingLi>
-          <TrendingLi>Home interiors</TrendingLi>
-          <TrendingLi>Computer and tech</TrendingLi>
-          <TrendingLi>Tools, equipments</TrendingLi>
-          <TrendingLi>Sports and outdoor</TrendingLi>
-          <TrendingLi>Animal and pets</TrendingLi>
-          <TrendingLi>Machinery tools</TrendingLi>
-          <TrendingLi>More category</TrendingLi>
+          {UlItems.map((item) => 
+            <TrendingLi key={item.id}>{item.Title}</TrendingLi>
+          )}
         </TrendingUl>
         <TrendingImg>
           <TrendingP>Latest trending</TrendingP>

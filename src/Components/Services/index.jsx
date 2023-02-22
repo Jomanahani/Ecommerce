@@ -17,13 +17,18 @@ const ServicesName = styled.h4`
   font-size: 1rem;
   font-weight: 500;
   color: ${(props) => props.theme.pallet.primaryText};
-  padding: 1rem;
-  padding-right: 6rem;
+  padding:0rem 6rem 0 1rem;
+  position: relative;
+  top: -2rem;
 `;
 const ServicesIcon = styled.div`
   position: relative;
   top: -2rem;
-  left: 13rem;
+  left: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
   z-index: 1;
   height: 3rem;
   width: 3rem;
