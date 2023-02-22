@@ -4,7 +4,7 @@ import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import styled from "styled-components";
 import RegisterButton from "../RegisterButton";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   Forminput,
   FormLabel,
@@ -18,8 +18,6 @@ import axios from "axios";
 import { API_URL } from "../../config/api";
 import { useContext } from "react";
 import { AuthContext } from "../../Context/authContext";
-// import PhoneInput from "react-phone-input-2";
-// import PhoneInput from "react-phone-input-2";
 
 // styled component
 const RegForm = styled(SignForm)`
@@ -54,7 +52,7 @@ export default function RegisterForm() {
     isLoading: false
   });
   const [errors, setErrors] = useState({});
-  const [isAuthorized, setIsAuthorized] = useContext(AuthContext);
+  const [setIsAuthorized] = useContext(AuthContext);
 
   const handleChange = (e) => {
     setuserData({

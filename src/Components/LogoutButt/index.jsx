@@ -4,7 +4,7 @@ import { TbLogout } from "react-icons/tb";
 import { AuthContext } from '../../Context/authContext';
 
 export default function LogoutButt() {
-  const [isAuthorized, setIsAuthorized] = useContext(AuthContext);
+  const [ setIsAuthorized] = useContext(AuthContext);
 
     const logout = () => {
         localStorage.clear();

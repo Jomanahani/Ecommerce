@@ -4,7 +4,7 @@ import { AiFillFacebook } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 
 import RegisterButton, { RegButton } from "../RegisterButton";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   FlexDiv,
   Forminput,
@@ -29,9 +29,8 @@ export default function SignInForm() {
     isLoading: false,
   });
   const [errors, setErrors] = useState({});
-  const [token, setToken] = useState();
-  const [isAuthorized, setIsAuthorized] = useContext(AuthContext);
-  const navigate = useNavigate();
+  const [setToken] = useState();
+  const [setIsAuthorized] = useContext(AuthContext);
 
   const handleChange = (e) => {
     setData({
@@ -59,7 +58,6 @@ export default function SignInForm() {
         setIsAuthorized(true);
         setToken(res.data.token);
         localStorage.setItem("token", res.data.token);
-        // navigate(PATHS.HOME);
       }
     } catch (error) {
       setErrors(
