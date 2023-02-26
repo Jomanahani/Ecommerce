@@ -28,7 +28,7 @@ function App() {
           <div className="App">
             <GlobalStyle />
             <Suspense fallback={<div className="spinner" />}>
-              <Router/>
+              <Router />
             </Suspense>
           </div>
         </AuthContextProvider>
