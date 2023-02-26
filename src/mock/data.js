@@ -354,33 +354,9 @@ export const ElectronicsItems = [
   },
 ];
 
-// export const cartItems = [
-//   {
-//     id: 1,
-//     img: cart1,
-//     title: "T-shirts with multiple colors, for men and lady",
-//     desc: "Size: medium, Color: blue, Material: Plastic, Seller: Artel Market",
-//     price: "$78.99",
-//     quantity: 9,
-//   },
-//   {
-//     id: 2,
-//     img: cart2,
-//     title: "T-shirts with multiple colors, for men and lady",
-//     desc: "Size: medium, Color: blue, Material: Plastic, Seller: Best factory LLC",
-//     price: "$39.00",
-//     quantity: 3,
-//   },
-//   {
-//     id: 3,
+export const cartItems = [
 
-//     img: cart3,
-//     title: "T-shirts with multiple colors, for men and lady",
-//     desc: "Size: medium, Color: blue, Material: Plastic, Seller: Artel Market",
-//     price: "$170.50",
-//     quantity: 1,
-//   },
-// ];
+];
 
 export const relatedProducts = [
   {
