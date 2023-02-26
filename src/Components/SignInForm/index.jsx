@@ -16,7 +16,7 @@ import {
 import { SignIn } from "../../Validation/SignInValid";
 import { Error } from "../RegisterForm";
 import { PATHS } from "../../Router";
-import { AuthContext } from "../../Context/authContext";
+import { useAuthContext } from "../../Context/authContext";
 import { API_URL } from "../../config/api";
 import axios from "axios";
 
@@ -28,9 +28,7 @@ export default function SignInForm() {
     password: "",
     isLoading: false,
   });
-  const [errors, setErrors] = useState({});
-  const [setToken] = useState();
-  const [setIsAuthorized] = useContext(AuthContext);
+  const { errors, setErrors, setToken, setIsAuthorized } = useAuthContext();
 
   const handleChange = (e) => {
     setData({
@@ -60,6 +58,7 @@ export default function SignInForm() {
         localStorage.setItem("token", res.data.token);
       }
     } catch (error) {
+      console.log(error);
       setErrors(
         error.inner.reduce((errors, error) => {
           errors[error.path] = error.message;

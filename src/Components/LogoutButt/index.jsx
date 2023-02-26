@@ -1,22 +1,13 @@
-import React from 'react'
-import { useContext } from 'react';
+import React from "react";
 import { TbLogout } from "react-icons/tb";
-import { AuthContext } from '../../Context/authContext';
+import { useAuthContext } from "../../Context/authContext";
 
 export default function LogoutButt() {
-  const [ setIsAuthorized] = useContext(AuthContext);
-
-    const logout = () => {
-        localStorage.clear();
-        setIsAuthorized(false);
-      };
+  const { logout } = useAuthContext();
 
   return (
     <>
-          <TbLogout
-            className="icon"
-            onClick={logout}
-          />
+      <TbLogout className="icon" onClick={logout} />
     </>
-  )
+  );
 }
