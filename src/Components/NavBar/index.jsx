@@ -10,6 +10,7 @@ import HeartSrc from "../../Assetse/Heart.png";
 import cartSrc from "../../Assetse/cart.png";
 import Toggle from "../Toggle";
 import { Link } from "react-router-dom";
+import LogoutButt from "../LogoutButt";
 
 export const Navigation = styled.nav`
   min-height: 3rem;
@@ -65,6 +66,10 @@ export default function NavBar() {
         <NavItem>
         <Link to='/cart'><img src={cartSrc} alt="cart" /></Link> 
           <NavName>My cart</NavName>
+        </NavItem>
+        <NavItem>
+        <LogoutButt />
+          <NavName>Logout</NavName>
         </NavItem>
       </NavUl>
     </Navigation>
