@@ -1,10 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 
 import { AiFillFacebook } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 
 import RegisterButton, { RegButton } from "../RegisterButton";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   FlexDiv,
   Forminput,
@@ -16,7 +16,7 @@ import {
 import { SignIn } from "../../Validation/SignInValid";
 import { Error } from "../RegisterForm";
 import { PATHS } from "../../Router";
-import { AuthContext } from "../../Context/authContext";
+import { useAuthContext } from "../../Context/authContext";
 import { API_URL } from "../../config/api";
 import axios from "axios";
 
@@ -28,10 +28,7 @@ export default function SignInForm() {
     password: "",
     isLoading: false,
   });
-  const [errors, setErrors] = useState({});
-  const [token, setToken] = useState();
-  const [isAuthorized, setIsAuthorized] = useContext(AuthContext);
-  const navigate = useNavigate();
+  const { errors, setErrors, setToken, setIsAuthorized } = useAuthContext();
 
   const handleChange = (e) => {
     setData({
@@ -59,9 +56,9 @@ export default function SignInForm() {
         setIsAuthorized(true);
         setToken(res.data.token);
         localStorage.setItem("token", res.data.token);
-        // navigate(PATHS.HOME);
       }
     } catch (error) {
+      console.log(error);
       setErrors(
         error.inner.reduce((errors, error) => {
           errors[error.path] = error.message;

@@ -7,38 +7,32 @@ import { GlobalStyle } from "./global/style";
 import "./index.css";
 
 // context
-import { AuthContext } from "./Context/authContext";
+import { AuthContextProvider } from "./Context/authContext";
 import { themeContext } from "./Context/ThemeContext";
-import { Auth, NotAuth } from "./Router";
+import { Router } from "./Router";
 
 function App() {
   const [theme, setTheme] = useState(lightTheme);
-  const [isAuthorized, setIsAuthorized] = useState(false);
-  console.log("isAuthorized", isAuthorized);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
       setTheme(savedTheme === "light" ? lightTheme : darkTheme);
     }
-    const token = localStorage.getItem("token");
-    if (token) {
-      setIsAuthorized(true);
-    }
   }, []);
 
   return (
     <ThemeProvider theme={theme}>
-      <AuthContext.Provider value={[isAuthorized, setIsAuthorized]}>
-        <themeContext.Provider value={[theme, setTheme]}>
+      <themeContext.Provider value={[theme, setTheme]}>
+        <AuthContextProvider>
           <div className="App">
             <GlobalStyle />
             <Suspense fallback={<div className="spinner" />}>
-              {isAuthorized ? <Auth /> : <NotAuth />}
+              <Router />
             </Suspense>
           </div>
-        </themeContext.Provider>
-      </AuthContext.Provider>
+        </AuthContextProvider>
+      </themeContext.Provider>
     </ThemeProvider>
   );
 }

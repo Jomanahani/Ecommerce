@@ -1,5 +1,6 @@
-import { lazy } from "react";
+import { lazy, useEffect } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
+import { useAuthContext } from "../Context/authContext";
 import Footer from "../Sections/Footer";
 import Header from "../Sections/Header";
 import Subscribe from "../Sections/Subscribe";
@@ -22,6 +23,19 @@ export const PATHS = {
   SIGNUP: "/signup",
   LOGIN: "/login",
 };
+
+export function Router() {
+  const { isAuthorized, setIsAuthorized } = useAuthContext();
+  console.log("isAuthorizeddd", isAuthorized);
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      setIsAuthorized(true);
+    }
+  },[setIsAuthorized])
+
+  return <>{isAuthorized ? <Auth /> : <NotAuth />}</>;
+}
 
 export function NotAuth() {
   return (
