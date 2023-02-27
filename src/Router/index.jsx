@@ -32,7 +32,7 @@ export function Router() {
     if (token) {
       setIsAuthorized(true);
     }
-  }, []);
+  },[setIsAuthorized])
 
   return <>{isAuthorized ? <Auth /> : <NotAuth />}</>;
 }
