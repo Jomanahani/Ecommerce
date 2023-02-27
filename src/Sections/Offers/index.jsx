@@ -6,11 +6,9 @@ import { CategoryContaner, InerContaner, Title } from "../Categories/style";
 import { Descrption } from "../../Components/RecommendedItem";
 import { RecommendedContaner } from "../Recommended";
 
-import offer1 from "../../Assetse/offer1.png";
-import offer2 from "../../Assetse/offer2.png";
-import offer3 from "../../Assetse/offer3.png";
-import offer4 from "../../Assetse/offer4.png";
+
 import offer5 from "../../Assetse/offer5.png";
+import { offers } from "../../mock/data";
 
 const OfferTimer = styled.div`
   width: 18rem;
@@ -29,7 +27,7 @@ const Timer = styled.div`
   color: white;
   text-align: center;
   border-radius: 0.5rem;
-  &>p{
+  & > p {
     font-size: 0.7rem;
   }
 `;
@@ -66,16 +64,10 @@ export default function Offers() {
         </TimerContaner>
       </OfferTimer>
       <InerContaner>
-        <OfferItem src={offer1} name="Smart watches" price="-25%" />
-        <OfferItem src={offer2} name="Laptops" price="-15%" />
-        <OfferItem src={offer3} name="GoPro cameras" price="-40%" />
-        <OfferItem src={offer4} name="Headphones" price="-25%" />
-        <OfferItem
-          src={offer5}
-          name="Canon camreras"
-          price="-25%"
-          lastItem="true"
-        />
+        {offers.map((item) => (
+          <OfferItem  key={item.id} src={item.src} name={item.name} price={item.price} /> 
+        ))}
+        <OfferItem src={offer5} name="Canon camreras" price="-25%" lastItem="true"/>
       </InerContaner>
     </CategoryContaner>
   );

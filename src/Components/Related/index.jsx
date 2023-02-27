@@ -1,15 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import { RelatedItems } from "../../mock/data";
 
 import { Information } from "../MayLike";
 import { FlexDiv, FormTitle } from "../SignInForm/style";
-
-import gray1 from "../../Assetse/gray1.png";
-import gray2 from "../../Assetse/gray2.png";
-import gray3 from "../../Assetse/gray3.png";
-import gray4 from "../../Assetse/gray4.png";
-import gray5 from "../../Assetse/gray5.png";
-import gray6 from "../../Assetse/gray6.png";
 
 export const RelatedDiv = styled.div`
   width: 100%;
@@ -40,7 +34,14 @@ export default function Related() {
     <RelatedDiv>
       <FormTitle>Related products</FormTitle>
       <FlexDiv className="justify">
-        <div>
+        {RelatedItems.map((item)=>(
+          <div key={item.id}>
+          <img src={item.img} alt="itemImg" />
+          <Information className="Name">{item.title}</Information>
+          <Information className="price">{item.price}</Information>
+        </div>
+        ))}
+        {/* <div>
           <img src={gray1} alt="itemImg" />
           <Information className="Name">Xiaomi Redmi 8 Original</Information>
           <Information className="price">$32.00-$40.00</Information>
@@ -73,7 +74,7 @@ export default function Related() {
           <img src={gray2} alt="itemImg" />
           <Information className="Name">Xiaomi Redmi 8 Original</Information>
           <Information className="price">$32.00-$40.00</Information>
-        </div>
+        </div> */}
       </FlexDiv>
     </RelatedDiv>
   );

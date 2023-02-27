@@ -1,18 +1,13 @@
 import React from "react";
 
-import ItemCard from "../../Components/ItemCard";
 import { Container } from "../../global/style";
 import { PageLayout ,PageContent } from "./style";
-import SideBar from "../../Components/SideBar";
 
-import select1 from "../../Assetse/select1.png";
-import select2 from "../../Assetse/select2.png";
-import select3 from "../../Assetse/select3.png";
-import select4 from "../../Assetse/select4.png";
-import select5 from "../../Assetse/select5.png";
-import select6 from "../../Assetse/select6.png";
+import ItemCard from "../../Components/ItemCard";
+import SideBar from "../../Components/SideBar";
 import ItemPath from "../../Components/ItemPath";
 import ItemFilter from "../../Components/ItemFilter";
+import { SelectedItem } from "../../mock/data";
 
 export default function SelectedItems() {
   return (
@@ -23,7 +18,12 @@ export default function SelectedItems() {
        <SideBar />
        <PageContent>
         <ItemFilter selected />
-        <ItemCard
+        {SelectedItem.map((item)=>(
+          <ItemCard
+          key={item.key} {...item} />
+        ))
+        }
+        {/* <ItemCard
           src={select1}
           name="Canon Cmera EOS 2000, Black 10x zoom"
           price="$998.00"
@@ -75,7 +75,7 @@ export default function SelectedItems() {
           desc="Ut enim ad minim veniam, quis nostrud exercitation ullamco
            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
            dolor in reprehenderit "
-        />
+        /> */}
         </PageContent>
         </PageLayout>
       </Container>

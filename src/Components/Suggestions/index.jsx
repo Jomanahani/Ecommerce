@@ -8,10 +8,8 @@ import { RelatedDiv } from "../Related";
 import { ItemP } from "../ItemCard";
 import { FlexDiv, FormTitle } from "../SignInForm/style";
 
-import gray1 from "../../Assetse/gray1.png";
-import gray2 from "../../Assetse/gray2.png";
-import gray3 from "../../Assetse/gray3.png";
-import gray4 from "../../Assetse/gray4.png";
+
+import { relatedProducts } from "../../mock/data";
 
 const SuggestionsDiv = styled(RelatedDiv)`
   & img {
@@ -37,7 +35,19 @@ export default function Suggestions() {
     <SuggestionsDiv>
       <FormTitle>Related products</FormTitle>
       <FlexDiv className="justify">
-        <div>
+        {relatedProducts.map((product)=>(
+            <div key={product.id}>
+            <img src={product.img} alt="itemImg" />
+            <ItemP className="elecPrice">{product.price}</ItemP>
+            <Information className="desc">
+             {product.title}
+            </Information>
+            <MoveButton>
+              <BsCart3 /> Move to cart
+            </MoveButton>
+          </div>
+          ))}
+        {/* <div>
           <img src={gray1} alt="itemImg" />
           <ItemP className="elecPrice">$99.50</ItemP>
           <Information className="desc">
@@ -80,7 +90,7 @@ export default function Suggestions() {
             {" "}
             <BsCart3 /> Move to cart
           </MoveButton>
-        </div>
+        </div> */}
       </FlexDiv>
     </SuggestionsDiv>
   );

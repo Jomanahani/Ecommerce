@@ -26,8 +26,8 @@ export const Option = styled.p`
   color: #505050;
   padding-top: 1rem;
   cursor: pointer;
+  color: ${(props) => props.theme.pallet.primaryText};
   &.checked {
-    color: ${(props) => props.theme.pallet.primaryText};
     padding-top: 0;
   }
   &.All {
