@@ -37,10 +37,10 @@ import services1 from "../Assetse/services1.png";
 import services2 from "../Assetse/services2.png";
 import services3 from "../Assetse/services3.png";
 import services4 from "../Assetse/services4.png";
-import {AiOutlineSearch} from "react-icons/ai"
-import {HiArchiveBox} from "react-icons/hi2"
-import {FaTelegramPlane} from "react-icons/fa"
-import {GiCheckedShield} from "react-icons/gi"
+import { AiOutlineSearch } from "react-icons/ai";
+import { HiArchiveBox } from "react-icons/hi2";
+import { FaTelegramPlane } from "react-icons/fa";
+import { GiCheckedShield } from "react-icons/gi";
 
 import select1 from "../Assetse/select1.png";
 import select2 from "../Assetse/select2.png";
@@ -113,14 +113,26 @@ export const CategoriesContaner = [
     introTitle: "Home and outdoor",
     sourceBtn: "Source now",
     products: [
-        { id: 1, title: "Soft chairFrom: ", From :"From USD 19", img: Category1 },
-        { id: 2, title: "Sofa & chair", From: "From USD 19", img: Category2 },
-        { id: 3, title: "Kitchen dishes", From: "From USD 19", img: Category3 },
-        { id: 4, title: "Smart watches", From: "From USD 19", img: Category4 ,upRad:true},
-        { id: 5, title: "Kitchen mixer", From: "From USD 100", img: Category5 },
-        { id: 6, title: "Blenders", From: "From USD 39", img: Category6 },
-        { id: 7, title: "Home appliance", From: "From USD 19", img: Category7 },
-        { id: 8, title: "Coffee maker", From: "From USD 10", img: Category8 ,downRad:true},
+      { id: 1, title: "Soft chairFrom: ", From: "From USD 19", img: Category1 },
+      { id: 2, title: "Sofa & chair", From: "From USD 19", img: Category2 },
+      { id: 3, title: "Kitchen dishes", From: "From USD 19", img: Category3 },
+      {
+        id: 4,
+        title: "Smart watches",
+        From: "From USD 19",
+        img: Category4,
+        upRad: true,
+      },
+      { id: 5, title: "Kitchen mixer", From: "From USD 100", img: Category5 },
+      { id: 6, title: "Blenders", From: "From USD 39", img: Category6 },
+      { id: 7, title: "Home appliance", From: "From USD 19", img: Category7 },
+      {
+        id: 8,
+        title: "Coffee maker",
+        From: "From USD 10",
+        img: Category8,
+        downRad: true,
+      },
     ],
   },
   {
@@ -129,14 +141,26 @@ export const CategoriesContaner = [
     introTitle: "Consumer electronics and gadgets",
     sourceBtn: "Source now",
     products: [
-        { id: 1, title: "Smart watches", From: "From USD 19", img: Category9 },
-        { id: 2, title: "Cameras", From: "From USD 89", img: Category10 },
-        { id: 3, title: "Headphones", From: "From USD 10", img: Category11 },
-        { id: 4, title: "Smart watches", From: "From USD 90", img: Category12, upRad:true},
-        { id: 5, title: "Gaming set", From: "From USD 35", img: Category13 },
-        { id: 6, title: "Laptops & PC", From: "From USD 340", img: Category14 },
-        { id: 7, title: "Smartphones", From: "From USD 19", img: Category15 },
-        { id: 8, title: "Electric kattle", From: "From USD 240", img: Category16,downRad:true},
+      { id: 1, title: "Smart watches", From: "From USD 19", img: Category9 },
+      { id: 2, title: "Cameras", From: "From USD 89", img: Category10 },
+      { id: 3, title: "Headphones", From: "From USD 10", img: Category11 },
+      {
+        id: 4,
+        title: "Smart watches",
+        From: "From USD 90",
+        img: Category12,
+        upRad: true,
+      },
+      { id: 5, title: "Gaming set", From: "From USD 35", img: Category13 },
+      { id: 6, title: "Laptops & PC", From: "From USD 340", img: Category14 },
+      { id: 7, title: "Smartphones", From: "From USD 19", img: Category15 },
+      {
+        id: 8,
+        title: "Electric kattle",
+        From: "From USD 240",
+        img: Category16,
+        downRad: true,
+      },
     ],
   },
 ];
@@ -209,153 +233,149 @@ export const services = [
     id: 1,
     img: services1,
     title: "Source from Industry Hubs",
-    icon: <AiOutlineSearch/>,
+    icon: <AiOutlineSearch />,
   },
   {
     id: 2,
     img: services2,
     title: "Customize Your Products",
-    icon: <HiArchiveBox/>,
+    icon: <HiArchiveBox />,
   },
   {
     id: 3,
     img: services3,
     title: "Fast, reliable shipping by ocean or air",
-    icon: <FaTelegramPlane/>,
+    icon: <FaTelegramPlane />,
   },
   {
     id: 4,
     img: services4,
     title: "Product monitoring and inspection",
-    icon: <GiCheckedShield/>,
+    icon: <GiCheckedShield />,
   },
 ];
 
 export const SelectedItem = [
   {
-    id: 1,
+    id: 11,
     src: select1,
     price: "$998.00",
     name: "GoPro HERO6 4K Action Camera - Black",
     order: "154 orders",
-    desc:
+    description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+  },
+  {
+    id: 22,
+    src: select2,
+    price: "$998.00",
+    name: "GoPro HERO6 4K Action Camera - Black",
+    order: "154 orders",
+    description:
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit",
+  },
+  {
+    id: 33,
+    src: select3,
+    price: "$998.00",
+    name: "GoPro HERO6 4K Action Camera - Black",
+    order: "154 orders",
+    description:
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+  },
+  {
+    id: 44,
+    src: select4,
+    price: "$998.00",
+    name: "GoPro HERO6 4K Action Camera - Black",
+    order: "154 orders",
+    description:
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+  },
+  {
+    id: 55,
+    src: select5,
+    price: "$998.00",
+    name: "GoPro HERO6 4K Action Camera - Black",
+    order: "154 orders",
+    description:
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+  },
+  {
+    id: 66,
+    src: select6,
+    price: "$998.00",
+    name: "GoPro HERO6 4K Action Camera - Black",
+    order: "154 orders",
+    description:
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+  },
+];
+
+export const ElectronicsItems = [
+  {
+    id: 1,
+    src: select1,
+    price: "$998.00",
+    name: "GoPro HERO6 4K Action Camera - Black",
+    rate: stars4,
   },
   {
     id: 2,
     src: select2,
     price: "$998.00",
     name: "GoPro HERO6 4K Action Camera - Black",
-    order: "154 orders",
-    desc:"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit"
+    rate: stars3,
   },
   {
     id: 3,
-    src: select3,
+    src: select2,
     price: "$998.00",
     name: "GoPro HERO6 4K Action Camera - Black",
-    order: "154 orders",
-    desc:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+    rate: stars4,
   },
   {
     id: 4,
-    src: select4,
+    src: select3,
     price: "$998.00",
     name: "GoPro HERO6 4K Action Camera - Black",
-    order: "154 orders",
-    desc:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+    rate: stars4,
   },
   {
     id: 5,
     src: select5,
     price: "$998.00",
     name: "GoPro HERO6 4K Action Camera - Black",
-    order: "154 orders",
-    desc:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+    rate: stars4,
   },
   {
     id: 6,
-    src: select6,
+    src: select2,
     price: "$998.00",
     name: "GoPro HERO6 4K Action Camera - Black",
-    order: "154 orders",
-    desc:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
-  }
-
-]
-
-export const ElectronicsItems = [
-  {
-    id: 1,
-    ImgSrc: select1,
-    price: "$998.00",
-    description: "GoPro HERO6 4K Action Camera - Black",
-    rate: stars4,
-  },
-  {
-    id: 2,
-    ImgSrc: select2,
-    price: "$998.00",
-    description: "GoPro HERO6 4K Action Camera - Black",
-    rate: stars3,
-  },
-  {
-    id: 3,
-    ImgSrc: select2,
-    price: "$998.00",
-    description: "GoPro HERO6 4K Action Camera - Black",
-    rate: stars4,
-  },
-  {
-    id: 4,
-    ImgSrc: select3,
-    price: "$998.00",
-    description: "GoPro HERO6 4K Action Camera - Black",
-    rate: stars4,
-  },
-  {
-    id: 5,
-    ImgSrc: select5,
-    price: "$998.00",
-    description: "GoPro HERO6 4K Action Camera - Black",
-    rate: stars4,
-  },
-  {
-    id: 6,
-    ImgSrc: select2,
-    price: "$998.00",
-    description: "GoPro HERO6 4K Action Camera - Black",
     rate: stars4,
   },
   {
     id: 7,
-    ImgSrc: select4,
+    src: select4,
     price: "$998.00",
-    description: "Canon Cmera EOS 2000,Black 10x zoom",
+    name: "Canon Cmera EOS 2000,Black 10x zoom",
     rate: stars4,
   },
   {
     id: 8,
-    ImgSrc: select5,
+    src: select5,
     price: "$998.00",
-    description: "Canon Cmera EOS 2000,Black 10x zoom",
+    name: "Canon Cmera EOS 2000,Black 10x zoom",
     rate: stars4,
   },
   {
     id: 9,
-    ImgSrc: select1,
+    src: select1,
     price: "$998.00",
-    description: "Canon Cmera EOS 2000,Black 10x zoom",
+    name: "Canon Cmera EOS 2000,Black 10x zoom",
     rate: stars4,
   },
-];
-
-export const cartItems = [
-
 ];
 
 export const relatedProducts = [
@@ -451,5 +471,3 @@ export const mayLikes = [
     price: "$7.00 - $99.50",
   },
 ];
-
-

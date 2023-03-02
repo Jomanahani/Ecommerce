@@ -2,8 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 import favorite from "../../Assetse/favorite.png";
-import { ItemP, Rate } from "../ItemCard";
+import { ItemP, Rate } from "../ItemCard/style";
 import { Flex } from "../../Sections/Footer/style";
+import { BsFillCartPlusFill } from "react-icons/bs";
+import { BsFillCartDashFill } from "react-icons/bs";
+import { useCartContext } from "../../Context/CartContext";
 
 const ItemDiv = styled.div`
   &.main {
@@ -24,22 +27,45 @@ const ItemDiv = styled.div`
     border-top: 1px solid ${(props) => props.theme.pallet.Lines};
   }
 `;
-export default function ElectronicsItem(props) {
+export const CartIcon = styled.div`
+  height: 2.5rem;
+  font-size: 1.6rem;
+  color: ${(props) => props.theme.pallet.primaryText};
+  padding: 0 0.3rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+`;
+export default function ElectronicsItem({ item }) {
+  const {
+    state: { cardItems },
+    addToCart,
+    removeFromCart,
+  } = useCartContext();
+
+  const ExistInCart = () => cardItems.find((product) => product.id === item.id);
+
+  const handleBuy = () => {
+    ExistInCart() ? removeFromCart(item.id) : addToCart(item);
+  };
+
   return (
     <ItemDiv className="main">
-      <Rate className="center" src={props.src} alt="itemImage" />
+      <Rate className="center" src={item.src} alt="itemImage" />
       <ItemDiv className="info">
         <div>
           <Flex>
-            <ItemP className="elecPrice">{props.price}</ItemP>
+            <ItemP className="elecPrice">{item.price}</ItemP>
           </Flex>
           <Flex>
-            <Rate src={props.rate} alt="rate" />
+            <Rate src={item.rate} alt="rate" />
             <ItemP className="rate"> 7.5</ItemP>
           </Flex>
-
-          <ItemP className="elect">{props.desc}</ItemP>
+          <ItemP className="elect">{item.name}</ItemP>
         </div>
+        <CartIcon onClick={handleBuy}>
+          {ExistInCart() ? <BsFillCartDashFill /> : <BsFillCartPlusFill />}
+        </CartIcon>
         <Rate className="fav" src={favorite} alt="favoriteIcon" />
       </ItemDiv>
     </ItemDiv>

@@ -58,7 +58,7 @@ const IconDIV = styled.div`
 
 export default function ItemFilter(props) {
   const navigate = useNavigate();
- 
+
   return (
     <Filter>
       <p>
@@ -75,10 +75,20 @@ export default function ItemFilter(props) {
           <RiArrowDownSLine />
         </Featured>
         <Featured className="icons">
-          <IconDIV className={props.selected ? "selected" : ""} onClick={()=>{navigate("/selectedItems");}}>
+          <IconDIV
+            className={props.selected ? "selected" : ""}
+            onClick={() => {
+              navigate("/selectedItems");
+            }}
+          >
             <AiFillAppstore />
           </IconDIV>
-          <IconDIV className={props.electronic ? "selected right" : "right"} onClick={()=>{navigate("/electronics");}}>
+          <IconDIV
+            className={props.electronic ? "selected right" : "right"}
+            onClick={() => {
+              navigate("/electronics");
+            }}
+          >
             <FaBars />
           </IconDIV>
         </Featured>

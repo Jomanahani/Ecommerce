@@ -1,7 +1,8 @@
 import { Suspense, useEffect, useState } from "react";
-import { ThemeProvider } from "styled-components";
+import { Router } from "./Router";
 
 // style
+import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "../src/global/Themes";
 import { GlobalStyle } from "./global/style";
 import "./index.css";
@@ -9,7 +10,7 @@ import "./index.css";
 // context
 import { AuthContextProvider } from "./Context/authContext";
 import { themeContext } from "./Context/ThemeContext";
-import { Router } from "./Router";
+import CartProvider from "./Context/CartContext";
 
 function App() {
   const [theme, setTheme] = useState(lightTheme);
@@ -25,12 +26,14 @@ function App() {
     <ThemeProvider theme={theme}>
       <themeContext.Provider value={[theme, setTheme]}>
         <AuthContextProvider>
-          <div className="App">
-            <GlobalStyle />
-            <Suspense fallback={<div className="spinner" />}>
-              <Router />
-            </Suspense>
-          </div>
+          <CartProvider>
+            <div className="App">
+              <GlobalStyle />
+              <Suspense fallback={<div className="spinner" />}>
+                <Router />
+              </Suspense>
+            </div>
+          </CartProvider>
         </AuthContextProvider>
       </themeContext.Provider>
     </ThemeProvider>

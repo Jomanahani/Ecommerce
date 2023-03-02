@@ -24,10 +24,10 @@ export const Information = styled.p`
     color: #8b96a5;
     padding-top: 0.2rem;
   }
-  &.desc{
+  &.desc {
     color: #606060;
     padding: 0.5rem 0;
-    padding-right: 20% ;
+    padding-right: 20%;
   }
 `;
 
@@ -35,62 +35,15 @@ export default function MayLike() {
   return (
     <LikeDiv>
       <Title className="like">You may like</Title>
-      {mayLikes.map((item)=>(
+      {mayLikes.map((item) => (
         <FlexDiv key={item.key} className="align">
-        <img src={item.img} alt="itemImage" />
-        <div>
-          <Information className="Name">
-            {item.title}
-          </Information>
-          <Information className="price">{item.price}</Information>
-        </div>
-      </FlexDiv>
+          <img src={item.img} alt="itemImage" />
+          <div>
+            <Information className="Name">{item.title}</Information>
+            <Information className="price">{item.price}</Information>
+          </div>
+        </FlexDiv>
       ))}
-      {/* <FlexDiv className="align">
-        <img src={like1} alt="itemImage" />
-        <div>
-          <Information className="Name">
-            Apple Watch Series Space Gray
-          </Information>
-          <Information className="price">$7.00 - $99.50</Information>
-        </div>
-      </FlexDiv>
-      <FlexDiv className="align">
-        <img src={like2} alt="itemImage" />
-        <div>
-          <Information className="Name">
-            Apple Watch Series Space Gray
-          </Information>
-          <Information className="price">$7.00 - $99.50</Information>
-        </div>
-      </FlexDiv>
-      <FlexDiv className="align">
-        <img src={like3} alt="itemImage" />
-        <div>
-          <Information className="Name">
-            Apple Watch Series Space Gray
-          </Information>
-          <Information className="price">$7.00 - $99.50</Information>
-        </div>
-      </FlexDiv>
-      <FlexDiv className="align">
-        <img src={like4} alt="itemImage" />
-        <div>
-          <Information className="Name">
-            Apple Watch Series Space Gray
-          </Information>
-          <Information className="price">$7.00 - $99.50</Information>
-        </div>
-      </FlexDiv>
-      <FlexDiv className="align">
-        <img src={like2} alt="itemImage" />
-        <div>
-          <Information className="Name">
-            Apple Watch Series Space Gray
-          </Information>
-          <Information className="price">$7.00 - $99.50</Information>
-        </div>
-      </FlexDiv> */}
     </LikeDiv>
   );
 }

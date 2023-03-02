@@ -1,7 +1,6 @@
 import React from "react";
 
 import { FlexDiv } from "../SignInForm/style";
-import { ItemP, Rate } from "../ItemCard";
 import { Join } from "../../Sections/Trending";
 import {
   Dot,
@@ -32,6 +31,7 @@ import stars4 from "../../Assetse/stars4.png";
 import Region from "../../Assetse/Region.png";
 import germany from "../../Assetse/germany.png";
 import { Option } from "../SideBar/style";
+import { ItemP, Rate } from "../ItemCard/style";
 
 function ShowItem() {
   return (

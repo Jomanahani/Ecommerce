@@ -1,116 +1,49 @@
 import React from "react";
-import styled from "styled-components";
 
 import favorite from "../../Assetse/favorite.png";
 import stars from "../../Assetse/stars.png";
+
+import { BsFillCartPlusFill } from "react-icons/bs";
+import { BsFillCartDashFill } from "react-icons/bs";
+
+import { CartIcon } from "../ElectronicsItem";
 import { Dot } from "../ShowItem/style";
+import { FlexP, ItemDiv, ItemP, Rate } from "./style";
 
-const ItemDiv = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  margin: 1rem auto;
-  width: 85%;
-  height: 14.5rem;
-  background-color: ${(props) => props.theme.pallet.mainBackdround};
-  border: 1px solid ${(props) => props.theme.pallet.Lines};
-  border-radius: 0.5rem;
-    &>div{
-      padding:0 1rem;
-    }
-`;
-export const ItemP = styled.p`
-  font-size: 1rem;
-  padding: 0.3rem 0;
-  color:${(props) => props.theme.pallet.primaryText};
-  &.name {
-    font-weight: 500;
-  }
-  &.price {
-    font-size: 1.3rem;
-    font-weight: 600;
-  }
-  &.view {
-    color: #0d6efd;
-    cursor: pointer;
-  }
-  &.rate {
-    color: #ff9017;
-    padding: 0 0.5rem;
-  }
-  &.orders {
-    color: ${(props) => props.theme.pallet.secondaryText};
-  }
-  &.free {
-    color: #00b517;
-  }
-  &.desc {
-    font-weight: 400;
-    color: #505050;
-  }
-  &.elect {
-    font-weight: 400;
-    color: #505050;
-    padding: 0;
-  }
-  &.elecPrice {
-    font-size: 1.1rem;
-    font-weight: 600;
-    padding: 0;
-  }
-  &.offer {
-    color: #fa3434;
-    font-size: 1.1rem;
-    font-weight: 600;
-    padding: 0;
-  }
-  &.flex{
-    display: flex;
-    justify-content: flex-end;
-    font-weight: 500;
-  }
-`;
-export const Rate = styled.img`
-  height: 1rem;
-  width: 4.3rem;
-  &.fav {
-    height: 2.5rem;
-    width: 2.5rem;
-    cursor: pointer;
-  }
-  &.center {
-    padding: 1rem;
-    height: 90%;
-    width: 90%;
-    margin: 0 auto;
-  }
-`;
-const FlexP = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 55%;
-`;
+import { useCartContext } from "../../Context/CartContext";
 
-export default function ItemCard(props) {
+export default function ItemCard({ item }) {
+  const {
+    state: { cardItems },
+    addToCart,
+    removeFromCart,
+  } = useCartContext();
+
+  const ExistInCart = () => cardItems.find((product) => product.id === item.id);
+
+  const handleBuy = () => {
+    ExistInCart() ? removeFromCart(item.id) : addToCart(item);
+  };
   return (
     <ItemDiv>
-      <img src={props.src} alt="itemImage" />
+      <img src={item.src} alt="itemImage" />
       <div>
-        <ItemP className="name">{props.name}</ItemP>
-        <ItemP className="price">{props.price}</ItemP>
+        <ItemP className="name">{item.name}</ItemP>
+        <ItemP className="price">{item.price}</ItemP>
         <FlexP>
           <Rate src={stars} alt="rate" />
           <ItemP className="rate">7.5</ItemP>
           <Dot />
-          <ItemP className="orders">{props.order}</ItemP>
+          <ItemP className="orders">{item.order}</ItemP>
           <Dot />
           <ItemP className="free">Free Shipping</ItemP>
         </FlexP>
-        <ItemP className="desc">{props.desc}</ItemP>
+        <ItemP className="desc">{item.description}</ItemP>
         <ItemP className="view">View details</ItemP>
       </div>
-
+      <CartIcon onClick={handleBuy}>
+        {ExistInCart() ? <BsFillCartDashFill /> : <BsFillCartPlusFill />}
+      </CartIcon>
       <Rate className="fav" src={favorite} alt="favoriteIcon" />
     </ItemDiv>
   );

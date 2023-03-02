@@ -5,7 +5,6 @@ const useAuth = () => {
   const [isAuthorized, setIsAuthorized] = useState(false);
   const [errors, setErrors] = useState([]);
   const [token, setToken] = useState("");
-  const [username, setUsername] = useState("");
 
   const logout = () => {
     localStorage.removeItem("token");
@@ -22,8 +21,6 @@ const useAuth = () => {
     setErrors,
     token,
     setToken,
-    username,
-    setUsername,
     logout,
   };
 };

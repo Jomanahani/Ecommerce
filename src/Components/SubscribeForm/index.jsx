@@ -25,6 +25,7 @@ export const SubsButton = styled.button`
   border-radius: 0.6rem;
   border: none;
   outline: none;
+  cursor: pointer;
   &.orang {
     background-color: #ff9017;
   }
