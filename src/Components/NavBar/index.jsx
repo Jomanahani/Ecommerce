@@ -34,7 +34,7 @@ export const NavItem = styled.li`
   font-size: 1rem;
   color: ${(props) => props.theme.pallet.primaryText};
   font-weight: 500;
-  cursor: pointer;  
+  cursor: pointer;
 `;
 const NavName = styled.p`
   font-size: 0.7rem;
@@ -48,27 +48,33 @@ export default function NavBar() {
       <Logo />
       <Search />
       <NavUl>
-      <NavItem>
-        <Toggle/>
+        <NavItem>
+          <Toggle />
         </NavItem>
         <NavItem>
-        <Link to='/'><img src={profileSrc} alt="profile" /></Link> 
+          <Link to="/">
+            <img src={profileSrc} alt="profile" />
+          </Link>
           <NavName>Profile</NavName>
         </NavItem>
         <NavItem>
-         <img src={MessageSrc} alt="Messgae" />
+          <img src={MessageSrc} alt="Messgae" />
           <NavName>Message</NavName>
         </NavItem>
         <NavItem>
-        <Link to='/item'><img src={HeartSrc} alt="Heart" /></Link> 
+          <Link to="/item">
+            <img src={HeartSrc} alt="Heart" />
+          </Link>
           <NavName>Orders</NavName>
         </NavItem>
         <NavItem>
-        <Link to='/cart'><img src={cartSrc} alt="cart" /></Link> 
+          <Link to="/cart">
+            <img src={cartSrc} alt="cart" />
+          </Link>
           <NavName>My cart</NavName>
         </NavItem>
         <NavItem>
-        <LogoutButt/>
+          <LogoutButt />
           <NavName>Logout</NavName>
         </NavItem>
       </NavUl>

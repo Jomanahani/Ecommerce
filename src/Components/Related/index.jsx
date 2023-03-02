@@ -34,47 +34,13 @@ export default function Related() {
     <RelatedDiv>
       <FormTitle>Related products</FormTitle>
       <FlexDiv className="justify">
-        {RelatedItems.map((item)=>(
+        {RelatedItems.map((item) => (
           <div key={item.id}>
-          <img src={item.img} alt="itemImg" />
-          <Information className="Name">{item.title}</Information>
-          <Information className="price">{item.price}</Information>
-        </div>
+            <img src={item.img} alt="itemImg" />
+            <Information className="Name">{item.title}</Information>
+            <Information className="price">{item.price}</Information>
+          </div>
         ))}
-        {/* <div>
-          <img src={gray1} alt="itemImg" />
-          <Information className="Name">Xiaomi Redmi 8 Original</Information>
-          <Information className="price">$32.00-$40.00</Information>
-        </div>
-
-        <div>
-          <img src={gray3} alt="itemImg" />
-          <Information className="Name">Xiaomi Redmi 8 Original</Information>
-          <Information className="price">$32.00-$40.00</Information>
-        </div>
-
-        <div>
-          <img src={gray5} alt="itemImg" />
-          <Information className="Name">Xiaomi Redmi 8 Original</Information>
-          <Information className="price">$32.00-$40.00</Information>
-        </div>
-
-        <div>
-          <img src={gray4} alt="itemImg" />
-          <Information className="Name">Xiaomi Redmi 8 Original</Information>
-          <Information className="price">$32.00-$40.00</Information>
-        </div>
-
-        <div>
-          <img src={gray6} alt="itemImg" />
-          <Information className="Name">Xiaomi Redmi 8 Original</Information>
-          <Information className="price">$32.00-$40.00</Information>
-        </div>
-        <div>
-          <img src={gray2} alt="itemImg" />
-          <Information className="Name">Xiaomi Redmi 8 Original</Information>
-          <Information className="price">$32.00-$40.00</Information>
-        </div> */}
       </FlexDiv>
     </RelatedDiv>
   );

@@ -14,7 +14,7 @@ const LogoIcon = styled.img`
 `;
 const LogoTitle = styled.h1`
   font-size: 1.7rem;
-  color: #8CB7F5;
+  color: #8cb7f5;
   padding: 0 0.5rem;
 `;
 

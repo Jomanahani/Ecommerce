@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
+import { ItemP } from "../ItemCard/style";
+import { FlexDiv, FormTitle } from "../SignInForm/style";
+
 import { BsCart3 } from "react-icons/bs";
 
 import { Information } from "../MayLike";
 import { RelatedDiv } from "../Related";
-import { ItemP } from "../ItemCard";
-import { FlexDiv, FormTitle } from "../SignInForm/style";
-
 
 import { relatedProducts } from "../../mock/data";
 
@@ -35,62 +35,16 @@ export default function Suggestions() {
     <SuggestionsDiv>
       <FormTitle>Related products</FormTitle>
       <FlexDiv className="justify">
-        {relatedProducts.map((product)=>(
-            <div key={product.id}>
+        {relatedProducts.map((product) => (
+          <div key={product.id}>
             <img src={product.img} alt="itemImg" />
             <ItemP className="elecPrice">{product.price}</ItemP>
-            <Information className="desc">
-             {product.title}
-            </Information>
+            <Information className="desc">{product.title}</Information>
             <MoveButton>
               <BsCart3 /> Move to cart
             </MoveButton>
           </div>
-          ))}
-        {/* <div>
-          <img src={gray1} alt="itemImg" />
-          <ItemP className="elecPrice">$99.50</ItemP>
-          <Information className="desc">
-            GoPro HERO6 4K Action Camera - Black
-          </Information>
-          <MoveButton>
-            {" "}
-            <BsCart3 /> Move to cart
-          </MoveButton>
-        </div>
-        <div>
-          <img src={gray2} alt="itemImg" />
-          <ItemP className="elecPrice">$99.50</ItemP>
-          <Information className="desc">
-            GoPro HERO6 4K Action Camera - Black
-          </Information>
-          <MoveButton>
-            {" "}
-            <BsCart3 /> Move to cart
-          </MoveButton>
-        </div>
-        <div>
-          <img src={gray3} alt="itemImg" />
-          <ItemP className="elecPrice">$99.50</ItemP>
-          <Information className="desc">
-            GoPro HERO6 4K Action Camera - Black
-          </Information>
-          <MoveButton>
-            {" "}
-            <BsCart3 /> Move to cart
-          </MoveButton>
-        </div>
-        <div>
-          <img src={gray4} alt="itemImg" />
-          <ItemP className="elecPrice">$99.50</ItemP>
-          <Information className="desc">
-            GoPro HERO6 4K Action Camera - Black
-          </Information>
-          <MoveButton>
-            {" "}
-            <BsCart3 /> Move to cart
-          </MoveButton>
-        </div> */}
+        ))}
       </FlexDiv>
     </SuggestionsDiv>
   );

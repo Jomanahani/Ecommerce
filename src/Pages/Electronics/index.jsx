@@ -22,11 +22,7 @@ export default function Electronics() {
             <RecommendedContaner>
               {ElectronicsItems.map((item) => (
                 <ElectronicsItem
-                  key={item.id}
-                  src={item.ImgSrc}
-                  price={item.price}
-                  desc={item.description}
-                  rate={item.rate}
+                {...{ item }}
                 />
               ))}
             </RecommendedContaner>
