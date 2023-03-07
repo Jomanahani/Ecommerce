@@ -446,26 +446,31 @@ export const RelatedItems = [
 
 export const mayLikes = [
   {
+    id: 1,
     img: like1,
     title: "Apple Watch Series Space Gray",
     price: "$7.00 - $99.50",
   },
   {
+    id: 2,
     img: like2,
     title: "Apple Watch Series Space Gray",
     price: "$7.00 - $99.50",
   },
   {
+    id: 3,
     img: like3,
     title: "Apple Watch Series Space Gray",
     price: "$7.00 - $99.50",
   },
   {
+    id: 4,
     img: like4,
     title: "Apple Watch Series Space Gray",
     price: "$7.00 - $99.50",
   },
   {
+    id: 5,
     img: like2,
     title: "Apple Watch Series Space Gray",
     price: "$7.00 - $99.50",

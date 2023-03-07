@@ -11,6 +11,7 @@ import "./index.css";
 import { AuthContextProvider } from "./Context/authContext";
 import { themeContext } from "./Context/ThemeContext";
 import CartProvider from "./Context/CartContext";
+import ErrorBoundary from "./Components/ErrorBoundary";
 
 function App() {
   const [theme, setTheme] = useState(lightTheme);
@@ -23,20 +24,22 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider theme={theme}>
-      <themeContext.Provider value={[theme, setTheme]}>
-        <AuthContextProvider>
-          <CartProvider>
-            <div className="App">
-              <GlobalStyle />
-              <Suspense fallback={<div className="spinner" />}>
-                <Router />
-              </Suspense>
-            </div>
-          </CartProvider>
-        </AuthContextProvider>
-      </themeContext.Provider>
-    </ThemeProvider>
+    <ErrorBoundary>
+      <ThemeProvider theme={theme}>
+        <themeContext.Provider value={[theme, setTheme]}>
+          <AuthContextProvider>
+            <CartProvider>
+              <div className="App">
+                <GlobalStyle />
+                <Suspense fallback={<div className="spinner" />}>
+                  <Router />
+                </Suspense>
+              </div>
+            </CartProvider>
+          </AuthContextProvider>
+        </themeContext.Provider>
+      </ThemeProvider>
+    </ErrorBoundary>
   );
 }
 

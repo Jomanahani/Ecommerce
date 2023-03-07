@@ -16,14 +16,14 @@ import { RegisterSchema } from "../../Validation/Register";
 import { PATHS } from "../../Router";
 import axios from "axios";
 import { API_URL } from "../../config/api";
-import { useContext } from "react";
-import { AuthContext } from "../../Context/authContext";
+import { useAuthContext } from "../../Context/authContext";
 
 // styled component
 const RegForm = styled(SignForm)`
-  height: 38rem;
-  top: 5%;
+  margin-top: 3%;
+  margin-bottom: 4rem;
   padding-top: 0.5rem;
+  padding-bottom: 1rem;
 `;
 const Hr = styled.hr`
   border: none;
@@ -44,15 +44,14 @@ export default function RegisterForm() {
     Name: "",
     userName: "",
     email: "",
-    phone: '',
+    phone: "",
     country: "",
     password: "",
     RePassword: "",
-    checked: true,
-    isLoading: false
+    checked: false,
+    isLoading: false,
   });
-  const [errors, setErrors] = useState({});
-  const [setIsAuthorized] = useContext(AuthContext);
+  const { errors, setErrors, setIsAuthorized } = useAuthContext();
 
   const handleChange = (e) => {
     setuserData({
@@ -62,10 +61,12 @@ export default function RegisterForm() {
   };
 
   const handleChecked = (e) => {
+    const checkedv = e.target.checked;
     setuserData({
       ...userData,
-      [e.target.name]: e.target.checked ? false : true,
+      checked: checkedv,
     });
+    console.log("checked name", e.target.name, "jk", e.target.checked);
   };
 
   const createUser = async (e) => {
@@ -77,19 +78,18 @@ export default function RegisterForm() {
       });
       await RegisterSchema.validate(userData, { abortEarly: false });
       const res = await axios.post(`${API_URL}/users/signup`, {
-        Name : userData.Name,
+        name: userData.Name,
         email: userData.email,
         password: userData.password,
       });
 
       console.log(res);
 
-      if(res){
+      if (res) {
         setIsAuthorized(true);
         console.log("valid");
         localStorage.setItem("token", res.data.token);
       }
-
     } catch (error) {
       setErrors(
         error.inner.reduce((errors, error) => {
@@ -98,7 +98,7 @@ export default function RegisterForm() {
         }, {})
       );
       console.log(errors);
-    } finally{
+    } finally {
       setuserData({
         ...userData,
         isLoading: false,
@@ -151,7 +151,7 @@ export default function RegisterForm() {
         className="phone"
         name="phone"
         value={userData.phone}
-        onChange={(value) =>setuserData({ phone: value }) }
+        onChange={(value) => setuserData({ phone: value })}
       />
       {errors.phone && <Error>{errors.phone}</Error>}
       <FormLabel>Password</FormLabel>
@@ -174,17 +174,21 @@ export default function RegisterForm() {
         onChange={handleChange}
       />
       {errors.RePassword && <Error>{errors.RePassword}</Error>}
-      <RegisterButton title={ userData.isLoading? "Loading..." : "Register now" } />
+      <RegisterButton
+        title={userData.isLoading ? "Loading..." : "Register now"}
+      />
 
       <FlexDiv>
         <input
           name="checked"
-          checked={userData.checked}
           type="checkbox"
           onChange={handleChecked}
+          checked={userData.checked}
         />
         <FormLabel> I agree with Terms and Conditions </FormLabel>
       </FlexDiv>
+      {errors.checked && <Error>{errors.checked}</Error>}
+
       <Hr />
       <Logn>
         Already have an accaunt?<Link to={PATHS.LOGIN}> Logn in </Link>
