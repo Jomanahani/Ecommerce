@@ -20,6 +20,7 @@ export default function SelectedItems() {
         <ItemFilter selected />
         {SelectedItem.map((item)=>(
           <ItemCard
+          key={item.id}
           {...{ item }}
           />
         ))

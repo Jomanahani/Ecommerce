@@ -51,6 +51,7 @@ export const ItemP = styled.p`
   &.elecPrice {
     font-size: 1.1rem;
     font-weight: 600;
+    color: black;
     padding: 0;
   }
   &.offer {

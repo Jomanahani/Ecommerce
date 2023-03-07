@@ -7,6 +7,14 @@ export const GlobalStyle = createGlobalStyle`
   padding: 0;
   box-sizing: border-box;
 }
+::-webkit-scrollbar {
+  width: 8px;
+  background-color:${(props) => props.theme.pallet.Lines};
+}
+::-webkit-scrollbar-thumb {
+  background-color: #999999;
+  border-radius: 15px;
+}
 body{
 background-color:${(props) => props.theme.pallet.page};
 font-family: 'Inter', sans-serif;

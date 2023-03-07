@@ -4,15 +4,16 @@ import FormFooter from "../../Components/FormFooter";
 import SignInForm from "../../Components/SignInForm";
 
 export const RegisterPage = styled.div`
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  background-color: ${(props) => props.theme.pallet.secondaryBackdround};
+  /* position: relative; */
+  /* background-color: ${(props) => props.theme.pallet.secondaryBackdround}; */
 `;
 export default function SignIn() {
   return (
-    <RegisterPage>
+    <>
       <SignInForm />
       <FormFooter />
-    </RegisterPage>
+    </>
   );
 }

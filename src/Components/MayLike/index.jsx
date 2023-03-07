@@ -36,7 +36,7 @@ export default function MayLike() {
     <LikeDiv>
       <Title className="like">You may like</Title>
       {mayLikes.map((item) => (
-        <FlexDiv key={item.key} className="align">
+        <FlexDiv key={item.id} className="align">
           <img src={item.img} alt="itemImage" />
           <div>
             <Information className="Name">{item.title}</Information>
